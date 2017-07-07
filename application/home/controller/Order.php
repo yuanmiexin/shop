@@ -113,8 +113,10 @@ class Order extends Base
             if(request()->isPost())
             {
                 $data=input('post.');
-                $data['user_id']=session('user')->id;
+                $data['user_id']=intval(session('user')->id);
+
                 $res=model('UserInfo')->add($data);
+                //halt($res);
                 if($res)
                 {
                    return $this->success('收件地址添加成功','home/proinfo/orderlist');

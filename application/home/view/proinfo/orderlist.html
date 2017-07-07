@@ -15,18 +15,20 @@
     <div class="cont" style="font-size:12px">
         <div class="carImg"><img src="__STATIC__/home/images/car2.jpg" width="715" height="27" /></div>
         <h4 class="orderTitle">收货地址</h4>
-        <table class="ord">
+        <table class="ord" style="font-size:12px">
+            {foreach name='$address' item='vo'}
             <tr>
                 <td width="30%">
-                    <input type="radio" /> 张大炮
+                    <input type="radio" name="user"/> {$vo.recipients}
                 </td>
                 <td width="50%">
-                    上海,上海市,普陀区,曹杨路1040弄中友大厦一号楼19楼	,200000,13020129519
+                    {$adrcity[$vo.city_id]},{$adrcity[$vo.se_city_id]},{$vo.address}
                 </td>
                 <td>
                     <span class="green upd">[修改]</span> | <span class="green add">[添加]</span>
                 </td>
             </tr>
+            {/foreach}
         </table><!--ord/-->
         <form action="{:url('home/order/addressadd')}" method="post">
         <div class="address" style="font-size:12px">

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-07-01 17:37:24
+Date: 2017-07-07 17:28:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,14 +41,14 @@ DROP TABLE IF EXISTS `mytc_area`;
 CREATE TABLE `mytc_area` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '',
-  `image` varchar(255) NOT NULL,
   `city_id` int(11) unsigned NOT NULL DEFAULT '0',
-  `city_path` int(11) NOT NULL,
+  `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
   `listorder` int(8) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `create_time` int(11) unsigned NOT NULL DEFAULT '0',
   `update_time` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
+  KEY `parent_id` (`parent_id`),
   KEY `city_id` (`city_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -82,7 +82,7 @@ CREATE TABLE `mytc_bis` (
   PRIMARY KEY (`id`),
   KEY `city_id` (`city_id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mytc_bis
@@ -97,6 +97,7 @@ INSERT INTO `mytc_bis` VALUES ('11', '宏波养殖实业有限公司', '13881801
 INSERT INTO `mytc_bis` VALUES ('12', '宏波养殖实业有限公司', '13881801576@qq.com.cn', '/shop/public/upload\\20170630\\7e6d33a093c6480dd945039c01d0efff.gif', '/shop/public/upload\\20170630\\b799333050007e7729f111607a49d1b3.gif', '<p style=\"text-indent: 2em; line-height: 1.5em;\"><strong>宏波养殖实业有限公司</strong>创立于2009年，是中江县一家集养殖、种植、餐饮、地产、矿产和网络为一体的多元化民营企业。现有员工122人，其中高级技术人员及管理人员15人。公司自成立以来，本着以诚信为本求实创新、勇于开拓的精神，大力进行企业经营结构调整，为力争三年内成为中江的龙头企业，五年内成为四川知名企业，十年后成为上市公司的远大目标而奋斗。</p><p style=\"line-height: 1.5em;\">一、养殖业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">肉牛基地于2009年元月正式启动，基地位于县城南面20余公里，距离省会成都100公里，有省道罗桂路穿行而过的中江县双龙镇。基地采用了公司加农户的发展模式，以农业产业化为发展思路。力争使该基地发展成为年出栏肉牛2000余头以上，创产值逾2000余万元的大型养殖基地。目前基地配有畜牧师3人，具体负责指导农户牛舍建设、青饲料储藏、疫病防治和饲料搭配等工作。</p><p style=\"line-height: 1.5em;\">二、种植业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">宏波柚子林生态农业观光园占地150余亩，离县城仅2公里，位于东北镇喜胜村是中江县最大的中江柚和福建沙田柚的种植基地，年产柚子50至100吨。现有高级农艺师1人，助理农艺师2人，技工2人，目前基地正计划改良品种，力争年产值能达到100余万元。为了提高土地利用价值，同时该基地正在筹建中江食用菌核心试范区。利用牛粪开发，生产食用菌。预计到2011年初，该园将建成集养殖。种植，观光，休闲为一体的现代循环农业经济园。</p><p style=\"line-height: 1.5em;\">三、餐饮业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">蟠桃园休闲庄位于中江县通济镇，占地20余亩，交通便利，是集餐饮、休闲、观光为一体的农家乐，其中有高级厨师2名，中级厨师3名，员工7人，能同时容纳300余人用餐。自2009年元月开业以来，相继推出三月赏桃花，六月品“蟠桃”的主题活动，吸引了大批餐饮游客。现日均营业额千元以上，年产值百万元以上。<br/>四、矿产业：<br/>公司现在西藏山南拥有一9平方公里的矿山，经专家仔细勘测，已探明有丰富的锑矿资源，目前正在开采中。预计年产锑矿8万吨，总产值近亿元。</p><p style=\"line-height: 1.5em;\">五、地产业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了拉开向地产业进军的序幕，公司现已在中江县双龙镇征地65亩，进行农村场镇综合建设，届时将建成集农贸市场、街道、商品房、商铺、为一体的农村新镇。此项目现在已经破土动工，总投资3000多万元，预计将于2011年全面竣工。同时在永兴镇括地59亩投入小城镇建设。此项目正在运行中。</p><p style=\"line-height: 1.5em;\">六、网络运作：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2009年8月，公司投资8万余元自主建成3G网络“四川肉牛网”和“四川养殖网”。这也标志着公司将战略思路调整到与互联网接轨，提高信息更新速度，加速发展养殖业的宏伟目标的开始。同时，四川肉牛网与四川养殖网也将被推广为四川地区养殖行业的门户网站，为广大养殖企业和养殖户提供一个买卖、咨询、发布广告的综合信息平台。目前网站已经建设成功，在正常运营中。</p>', '1', '5', '54456565466545612', '0.00', '四川省德阳市', '陈波', '陈波', '8608387102727', '0', '0', '1498814453', '1498814790');
 INSERT INTO `mytc_bis` VALUES ('13', '宏波养殖实业有限公司', '13881801576@qq.com.cn', '/shop/public/upload\\20170630\\d1f3bf0609c08e174112ff3ad2a6297d.gif', '/shop/public/upload\\20170630\\5985be97f9328ad6157c0b7d2591f89c.gif', '<p style=\"line-height: 1.5em;\"><strong>宏波养殖实业有限公司</strong>创立于2009年，是中江县一家集养殖、种植、餐饮、地产、矿产和网络为一体的多元化民营企业。现有员工122人，其中高级技术人员及管理人员15人。公司自成立以来，本着以诚信为本求实创新、勇于开拓的精神，大力进行企业经营结构调整，为力争三年内成为中江的龙头企业，五年内成为四川知名企业，十年后成为上市公司的远大目标而奋斗。</p><p style=\"line-height: 1.5em;\">一、养殖业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">肉牛基地于2009年元月正式启动，基地位于县城南面20余公里，距离省会成都100公里，有省道罗桂路穿行而过的中江县双龙镇。基地采用了公司加农户的发展模式，以农业产业化为发展思路。力争使该基地发展成为年出栏肉牛2000余头以上，创产值逾2000余万元的大型养殖基地。目前基地配有畜牧师3人，具体负责指导农户牛舍建设、青饲料储藏、疫病防治和饲料搭配等工作。</p><p style=\"line-height: 1.5em;\">二、种植业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">宏波柚子林生态农业观光园占地150余亩，离县城仅2公里，位于东北镇喜胜村是中江县最大的中江柚和福建沙田柚的种植基地，年产柚子50至100吨。现有高级农艺师1人，助理农艺师2人，技工2人，目前基地正计划改良品种，力争年产值能达到100余万元。为了提高土地利用价值，同时该基地正在筹建中江食用菌核心试范区。利用牛粪开发，生产食用菌。预计到2011年初，该园将建成集养殖。种植，观光，休闲为一体的现代循环农业经济园。</p><p style=\"line-height: 1.5em;\">三、餐饮业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">蟠桃园休闲庄位于中江县通济镇，占地20余亩，交通便利，是集餐饮、休闲、观光为一体的农家乐，其中有高级厨师2名，中级厨师3名，员工7人，能同时容纳300余人用餐。自2009年元月开业以来，相继推出三月赏桃花，六月品“蟠桃”的主题活动，吸引了大批餐饮游客。现日均营业额千元以上，年产值百万元以上。</p><p style=\"line-height: 1.5em;\">四、矿产业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">公司现在西藏山南拥有一9平方公里的矿山，经专家仔细勘测，已探明有丰富的锑矿资源，目前正在开采中。预计年产锑矿8万吨，总产值近亿元。</p><p style=\"line-height: 1.5em;\">五、地产业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了拉开向地产业进军的序幕，公司现已在中江县双龙镇征地65亩，进行农村场镇综合建设，届时将建成集农贸市场、街道、商品房、商铺、为一体的农村新镇。此项目现在已经破土动工，总投资3000多万元，预计将于2011年全面竣工。同时在永兴镇括地59亩投入小城镇建设。此项目正在运行中。</p><p style=\"line-height: 1.5em;\">六、网络运作：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2009年8月，公司投资8万余元自主建成3G网络“四川肉牛网”和“四川养殖网”。这也标志着公司将战略思路调整到与互联网接轨，提高信息更新速度，加速发展养殖业的宏伟目标的开始。同时，四川肉牛网与四川养殖网也将被推广为四川地区养殖行业的门户网站，为广大养殖企业和养殖户提供一个买卖、咨询、发布广告的综合信息平台。目前网站已经建设成功，在正常运营中。</p>', '1', '5', '54864165613265', '0.00', '四川省德阳市', '陈波', '陈波', '8608387102727', '0', '0', '1498815850', '1498816015');
 INSERT INTO `mytc_bis` VALUES ('14', '宏波养殖实业有限公司', '13881801576@qq.com.cn', '/shop/public/upload\\20170630\\d1f3bf0609c08e174112ff3ad2a6297d.gif', '/shop/public/upload\\20170630\\5985be97f9328ad6157c0b7d2591f89c.gif', '<p style=\"line-height: 1.5em;\"><strong>宏波养殖实业有限公司</strong>创立于2009年，是中江县一家集养殖、种植、餐饮、地产、矿产和网络为一体的多元化民营企业。现有员工122人，其中高级技术人员及管理人员15人。公司自成立以来，本着以诚信为本求实创新、勇于开拓的精神，大力进行企业经营结构调整，为力争三年内成为中江的龙头企业，五年内成为四川知名企业，十年后成为上市公司的远大目标而奋斗。</p><p style=\"line-height: 1.5em;\">一、养殖业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">肉牛基地于2009年元月正式启动，基地位于县城南面20余公里，距离省会成都100公里，有省道罗桂路穿行而过的中江县双龙镇。基地采用了公司加农户的发展模式，以农业产业化为发展思路。力争使该基地发展成为年出栏肉牛2000余头以上，创产值逾2000余万元的大型养殖基地。目前基地配有畜牧师3人，具体负责指导农户牛舍建设、青饲料储藏、疫病防治和饲料搭配等工作。</p><p style=\"line-height: 1.5em;\">二、种植业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">宏波柚子林生态农业观光园占地150余亩，离县城仅2公里，位于东北镇喜胜村是中江县最大的中江柚和福建沙田柚的种植基地，年产柚子50至100吨。现有高级农艺师1人，助理农艺师2人，技工2人，目前基地正计划改良品种，力争年产值能达到100余万元。为了提高土地利用价值，同时该基地正在筹建中江食用菌核心试范区。利用牛粪开发，生产食用菌。预计到2011年初，该园将建成集养殖。种植，观光，休闲为一体的现代循环农业经济园。</p><p style=\"line-height: 1.5em;\">三、餐饮业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">蟠桃园休闲庄位于中江县通济镇，占地20余亩，交通便利，是集餐饮、休闲、观光为一体的农家乐，其中有高级厨师2名，中级厨师3名，员工7人，能同时容纳300余人用餐。自2009年元月开业以来，相继推出三月赏桃花，六月品“蟠桃”的主题活动，吸引了大批餐饮游客。现日均营业额千元以上，年产值百万元以上。</p><p style=\"line-height: 1.5em;\">四、矿产业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">公司现在西藏山南拥有一9平方公里的矿山，经专家仔细勘测，已探明有丰富的锑矿资源，目前正在开采中。预计年产锑矿8万吨，总产值近亿元。</p><p style=\"line-height: 1.5em;\">五、地产业：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了拉开向地产业进军的序幕，公司现已在中江县双龙镇征地65亩，进行农村场镇综合建设，届时将建成集农贸市场、街道、商品房、商铺、为一体的农村新镇。此项目现在已经破土动工，总投资3000多万元，预计将于2011年全面竣工。同时在永兴镇括地59亩投入小城镇建设。此项目正在运行中。</p><p style=\"line-height: 1.5em;\">六、网络运作：</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2009年8月，公司投资8万余元自主建成3G网络“四川肉牛网”和“四川养殖网”。这也标志着公司将战略思路调整到与互联网接轨，提高信息更新速度，加速发展养殖业的宏伟目标的开始。同时，四川肉牛网与四川养殖网也将被推广为四川地区养殖行业的门户网站，为广大养殖企业和养殖户提供一个买卖、咨询、发布广告的综合信息平台。目前网站已经建设成功，在正常运营中。</p>', '1', '5', '54864165613265', '0.00', '四川省德阳市', '陈波', '陈波', '8608387102727', '0', '1', '1498815868', '1498816544');
+INSERT INTO `mytc_bis` VALUES ('15', 'ddfds ', '456546544@44.com.dd', '/shop/public/upload\\20170704\\b979034ce3f924113c2c0d863400a240.jpg', '/shop/public/upload\\20170704\\f089a799e048e7f48a200695022c445b.jpg', '<p>dfdfsa&nbsp;</p>', '1', '2', '45646465', '0.00', 'dfsdaf', 'fdfa', 'fdsa', '5645564', '0', '1', '1499158382', '1499158382');
 
 -- ----------------------------
 -- Table structure for `mytc_bis_account`
@@ -122,7 +123,7 @@ CREATE TABLE `mytc_bis_account` (
   PRIMARY KEY (`id`),
   KEY `bis_id` (`bis_id`),
   KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mytc_bis_account
@@ -136,6 +137,7 @@ INSERT INTO `mytc_bis_account` VALUES ('6', 'username', '696bf0ed84dfe896cb7b585
 INSERT INTO `mytc_bis_account` VALUES ('7', 'chengboo', 'd289419a1c0b3b9c9741f4b14eb2fdbe', '3969', '11', '', '0', '1', '0', '0', '1498813301', '1498814795', '<p>一、中江柚品种特性及发展情况</p><p style=\"text-indent: 2em; line-height: 1.5em;\">中江柚属于文旦柚系品种，引自福建，首栽于我市永安乡，母树在中江永安乡场镇。1993年参加四川省优质果品评选，以总分83.6分被评为省优果品，近年来得到了中江县委、县政府的高度重视，得到了快速发展，直到2000年底，共发展中江柚250万株左右，但产量只有80万个左右，主要集中在子金乡印台村。该品种单果重2.5－3斤左右，倒卵圆形，金黄色，果上有油胞、芳香，果皮薄，果肉脆嫩化渣、汁多味甜，可溶性固形物达11.6%，种子少或无核；果实较耐贮藏；属于早熟品种，9月下旬-10月上旬成熟；树势中庸，易栽培，易丰产，一年栽，3-4年可试花挂果，6-7年可丰产，亩产可达5000斤以上。其缺点是易裂果，裂果率可达10-20%，故应选择6-7月份水源能解决的地方发展栽培。</p><p>二、中江柚丰产优质栽培技术</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了使中江柚尽快投产，产生效益，为我们致富奔小康作出贡献，我们就应学习、掌握和采用先进的科学的中江柚栽培技术，该项技术可用八个字来概括，即：种（良种壮苗）、建（高标准建园）、肥（科学施肥）、水（适时排灌）、剪（合理修剪）、保（保花保果）、治（加强病虫防治）、促（控长促花）。具体来讲：</p><p>（一）积极推广优良品种，培育发展良种壮苗</p><p style=\"text-indent: 2em; line-height: 1.5em;\">良种壮苗是中江柚获得“三高”的物质基础，首先必须加强对中江柚的提纯选优，从中选出裂果率低或不裂果、丰产稳产优质的优选单株，进行繁殖推广；其次要培育良种壮苗，发展栽植良种壮苗，杜绝劣等苗出圃。苗木质量好坏，直接影响到成活率、树体生长发育、丰产性和果实品质等，良种壮苗要求：（1）无检疫性病虫害，如黄龙病、溃疡病、果实蝇等；（2）品种纯正，砧木优良，嫁接部位愈合良好；（3）苗木生长健壮，主干端直，一般苗高40厘米以上，茎粗0.8厘米以上，并有3个以上分枝，每枝长20厘米以上；（4）根系完整，主侧根发达，一般主根长16.5厘米以上，并且有3-4条侧根，须根发达。</p><p>（二）高标准建园，确保质量效益</p><p style=\"text-indent: 2em; line-height: 1.5em;\">柚树根深树高，经济寿命长，几十年上百年固定在同一地点生长结果。因此，新建柚园只有始终坚持高标准、高质量建园，才能获得高产、优质和高效益。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">1、应选择坡度在25度以下的山地、丘陵和排灌方便、土壤疏松湿润的地方建园。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2、整地时必须全面修筑等高反坡梯田和保土贮水竹节沟及梯田外缘作梯梗，并种上香根草、百喜草等</p><p style=\"text-indent: 2em; line-height: 1.5em;\">3、新建园应坚持“三大一篓”，即大穴、大肥、大苗和营养篓（袋）假植。所谓大穴，就是挖深、宽一米的壕沟或一米见方的穴；大肥，就是每立方米分3-4层填埋20公斤稻草或绿肥、厩肥100-150斤、石灰1-1.5斤、磷肥1-1.5公斤、麸饼1-1.5公斤作基肥；大苗，按良种壮苗出圃；营养篓（袋）假植带土移栽（营养土配置，以菜园土、水稻田表土、干塘泥、火土为基础，每立方土中加入人粪2担、磷肥2-3公斤、猪牛粪3-4担拌匀成堆，外用稀泥密封堆沤30-45天，9月份用营养篓（袋）装营养土假植小苗，第二年9月份带土移栽）。</p>', '', '', '');
 INSERT INTO `mytc_bis_account` VALUES ('8', 'chengboos', '42d80891e2514896ce50eff5ca4f1b5b', '1000', '12', '', '0', '1', '0', '0', '1498814453', '1498814790', '<p style=\"line-height: 1.5em;\">一、中江柚品种特性及发展情况</p><p style=\"text-indent: 2em; line-height: 1.5em;\">中江柚属于文旦柚系品种，引自福建，首栽于我市永安乡，母树在中江永安乡场镇。1993年参加四川省优质果品评选，以总分83.6分被评为省优果品，近年来得到了中江县委、县政府的高度重视，得到了快速发展，直到2000年底，共发展中江柚250万株左右，但产量只有80万个左右，主要集中在子金乡印台村。该品种单果重2.5－3斤左右，倒卵圆形，金黄色，果上有油胞、芳香，果皮薄，果肉脆嫩化渣、汁多味甜，可溶性固形物达11.6%，种子少或无核；果实较耐贮藏；属于早熟品种，9月下旬-10月上旬成熟；树势中庸，易栽培，易丰产，一年栽，3-4年可试花挂果，6-7年可丰产，亩产可达5000斤以上。其缺点是易裂果，裂果率可达10-20%，故应选择6-7月份水源能解决的地方发展栽培。</p><p style=\"line-height: 1.5em;\">二、中江柚丰产优质栽培技术</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了使中江柚尽快投产，产生效益，为我们致富奔小康作出贡献，我们就应学习、掌握和采用先进的科学的中江柚栽培技术，该项技术可用八个字来概括，即：种（良种壮苗）、建（高标准建园）、肥（科学施肥）、水（适时排灌）、剪（合理修剪）、保（保花保果）、治（加强病虫防治）、促（控长促花）。具体来讲：</p><p style=\"line-height: 1.5em;\">（一）积极推广优良品种，培育发展良种壮苗</p><p style=\"text-indent: 2em; line-height: 1.5em;\">良种壮苗是中江柚获得“三高”的物质基础，首先必须加强对中江柚的提纯选优，从中选出裂果率低或不裂果、丰产稳产优质的优选单株，进行繁殖推广；其次要培育良种壮苗，发展栽植良种壮苗，杜绝劣等苗出圃。苗木质量好坏，直接影响到成活率、树体生长发育、丰产性和果实品质等，良种壮苗要求：（1）无检疫性病虫害，如黄龙病、溃疡病、果实蝇等；（2）品种纯正，砧木优良，嫁接部位愈合良好；（3）苗木生长健壮，主干端直，一般苗高40厘米以上，茎粗0.8厘米以上，并有3个以上分枝，每枝长20厘米以上；（4）根系完整，主侧根发达，一般主根长16.5厘米以上，并且有3-4条侧根，须根发达。</p><p style=\"line-height: 1.5em;\">（二）高标准建园，确保质量效益</p><p style=\"text-indent: 2em; line-height: 1.5em;\">柚树根深树高，经济寿命长，几十年上百年固定在同一地点生长结果。因此，新建柚园只有始终坚持高标准、高质量建园，才能获得高产、优质和高效益。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">1、应选择坡度在25度以下的山地、丘陵和排灌方便、土壤疏松湿润的地方建园。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2、整地时必须全面修筑等高反坡梯田和保土贮水竹节沟及梯田外缘作梯梗，并种上香根草、百喜草等。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">3、新建园应坚持“三大一篓”，即大穴、大肥、大苗和营养篓（袋）假植。所谓大穴，就是挖深、宽一米的壕沟或一米见方的穴；大肥，就是每立方米分3-4层填埋20公斤稻草或绿肥、厩肥100-150斤、石灰1-1.5斤、磷肥1-1.5公斤、麸饼1-1.5公斤作基肥；大苗，按良种壮苗出圃；营养篓（袋）假植带土移栽（营养土配置，以菜园土、水稻田表土、干塘泥、火土为基础，每立方土中加入人粪2担、磷肥2-3公斤、猪牛粪3-4担拌匀成堆，外用稀泥密封堆沤30-45天，9月份用营养篓（袋）装营养土假植小苗，第二年9月份带土移栽）。</p>', '', '', '');
 INSERT INTO `mytc_bis_account` VALUES ('9', 'chenbboo', 'ba3e094a196ea123d8c79ebc5bdd2d3e', '5916', '14', '', '0', '1', '0', '1', '1498815868', '1498816544', '<p style=\"line-height: 1.5em;\">一、中江柚品种特性及发展情况</p><p style=\"text-indent: 2em; line-height: 1.5em;\">中江柚属于文旦柚系品种，引自福建，首栽于我市永安乡，母树在中江永安乡场镇。1993年参加四川省优质果品评选，以总分83.6分被评为省优果品，近年来得到了中江县委、县政府的高度重视，得到了快速发展，直到2000年底，共发展中江柚250万株左右，但产量只有80万个左右，主要集中在子金乡印台村。该品种单果重2.5－3斤左右，倒卵圆形，金黄色，果上有油胞、芳香，果皮薄，果肉脆嫩化渣、汁多味甜，可溶性固形物达11.6%，种子少或无核；果实较耐贮藏；属于早熟品种，9月下旬-10月上旬成熟；树势中庸，易栽培，易丰产，一年栽，3-4年可试花挂果，6-7年可丰产，亩产可达5000斤以上。其缺点是易裂果，裂果率可达10-20%，故应选择6-7月份水源能解决的地方发展栽培。</p><p style=\"line-height: 1.5em;\">二、中江柚丰产优质栽培技术</p><p style=\"text-indent: 2em; line-height: 1.5em;\">为了使中江柚尽快投产，产生效益，为我们致富奔小康作出贡献，我们就应学习、掌握和采用先进的科学的中江柚栽培技术，该项技术可用八个字来概括，即：种（良种壮苗）、建（高标准建园）、肥（科学施肥）、水（适时排灌）、剪（合理修剪）、保（保花保果）、治（加强病虫防治）、促（控长促花）。具体来讲：</p><p style=\"line-height: 1.5em;\">（一）积极推广优良品种，培育发展良种壮苗</p><p style=\"text-indent: 2em; line-height: 1.5em;\">良种壮苗是中江柚获得“三高”的物质基础，首先必须加强对中江柚的提纯选优，从中选出裂果率低或不裂果、丰产稳产优质的优选单株，进行繁殖推广；其次要培育良种壮苗，发展栽植良种壮苗，杜绝劣等苗出圃。苗木质量好坏，直接影响到成活率、树体生长发育、丰产性和果实品质等，良种壮苗要求：（1）无检疫性病虫害，如黄龙病、溃疡病、果实蝇等；（2）品种纯正，砧木优良，嫁接部位愈合良好；（3）苗木生长健壮，主干端直，一般苗高40厘米以上，茎粗0.8厘米以上，并有3个以上分枝，每枝长20厘米以上；（4）根系完整，主侧根发达，一般主根长16.5厘米以上，并且有3-4条侧根，须根发达。</p><p style=\"line-height: 1.5em;\">（二）高标准建园，确保质量效益</p><p style=\"text-indent: 2em; line-height: 1.5em;\">柚树根深树高，经济寿命长，几十年上百年固定在同一地点生长结果。因此，新建柚园只有始终坚持高标准、高质量建园，才能获得高产、优质和高效益。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">1、应选择坡度在25度以下的山地、丘陵和排灌方便、土壤疏松湿润的地方建园。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">2、整地时必须全面修筑等高反坡梯田和保土贮水竹节沟及梯田外缘作梯梗，并种上香根草、百喜草等。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">3、新建园应坚持“三大一篓”，即大穴、大肥、大苗和营养篓（袋）假植。所谓大穴，就是挖深、宽一米的壕沟或一米见方的穴；大肥，就是每立方米分3-4层填埋20公斤稻草或绿肥、厩肥100-150斤、石灰1-1.5斤、磷肥1-1.5公斤、麸饼1-1.5公斤作基肥；大苗，按良种壮苗出圃；营养篓（袋）假植带土移栽（营养土配置，以菜园土、水稻田表土、干塘泥、火土为基础，每立方土中加入人粪2担、磷肥2-3公斤、猪牛粪3-4担拌匀成堆，外用稀泥密封堆沤30-45天，9月份用营养篓（袋）装营养土假植小苗，第二年9月份带土移栽）。</p>', '<img src=\"/ueditor/php/upload/image/20170630/1498815587602617.gif\" title=\"1498815587602617.gif\" alt=\"20.gif\" style=\"float: left;\"/><p style=\"text-indent: 2em;\"><span style=\"font-size: 14px;\">截止2009年底，已建成县城工业集中发展区面积6平方公里，加上乡镇特色工业小区，已集聚规模以上企业107家，比上年增加18家，占全县规模以上企业总数的71.3%，实现工业总产值66.2亿元。县城工业集中区有规模以上企业54家，实现工业总产值39.5亿元，工业增加值10.63亿元，主营业务收入38.8亿元，利税总额10082万元，利润总额6325万元，分别占到了全县规模以上企业的44.4%、46.4%、44.5%、31.9%、31.5%。工业集中发展区已经成为县域经济发展的重要载体和排头兵</span></p>', '<p style=\"text-indent: 0em;\"><img src=\"/ueditor/php/upload/image/20170630/1498815619115505.gif\" title=\"1498815619115505.gif\" alt=\"1498815619115505.gif\" width=\"334\" height=\"255\" border=\"0\" vspace=\"10\" style=\"width: 334px; height: 255px;margin-right:10px\"/><img src=\"/ueditor/php/upload/image/20170630/1498815624100302.gif\" title=\"1498815624100302.gif\" alt=\"1498815624100302.gif\" width=\"346\" height=\"255\" border=\"0\" vspace=\"10\" style=\"width: 346px; height: 255px;\"/><img src=\"/ueditor/php/upload/image/20170630/1498815629429457.gif\" title=\"1498815629429457.gif\" alt=\"19.gif\"/></p>', '<img src=\"/ueditor/php/upload/image/20170630/1498815717200657.gif\" title=\"1498815717200657.gif\" alt=\"21.gif\" style=\"float: left;\"/><p style=\"text-indent: 2em; line-height: 1.5em;\">江县童游街道水尾村赤坭土布自然村人口不到100人，却有个不平凡的致富能手，他叫曹宗成，今年53岁。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">曹宗成致富的故事从1991年开始。当时，他一男一女两个孩子在城里读小学，一年借读费要200元，这对于曹宗成一家来说是笔大数目。曹宗成一家四口人，分得10亩农田，一年收入也在2000元左右。生活的艰辛，逼得曹宗成不得不另谋出路，赤坭土布后山四里处有一片30多亩的荒山，长年无人打理。曹宗成觉得可惜，他主动找到村委会，要求承包这片山。经过多次协商，曹宗成最终以一次性付4200元的价格取得这片山61年经营权。东拼西借，曹宗成终于凑足了这笔钱。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">1992年开春，曹宗成在山的东面种了10多亩蜜桔与蜜柚，在山的西面种下了20亩的板栗。1996年，蜜桔开始挂果，1997年蜜柚也开始挂果，看着树上的果实，曹宗成喜上眉梢，多年辛苦的劳作终于有了收获。天有不测风云，1997年，一场大雪把曹宗成六七年的心血化为乌有，所有的果树都被冻死了。曹宗成没有低头，他决定种一种效益快又能防冻的新品种水果——青花梨。1998年春，曹宗成种了10亩青花梨。去年，这片青花梨开始结果。曹宗成采得梨子500多公斤。收入超过1000元。早先种下的板栗，2002年也开始挂果，开始有了收入。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">赤坭土布后山还有一片属于村集体的杨梅山，因为缺少管理，长势一直不好，村里多次提出要承包给村民管理，却一直无人问津。为了村集体的利益，曹宗成包下了这座山。在曹宗成起早贪黑的呵护下，这片山不到两年便有了变化，杨梅越长越好，尽管去年大旱，但还是结出了累累硕果，曹宗成获得了近3000元的收入。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">水尾村在建阳是以竹多出名的。早在1981年，联产承包到户时，曹宗成便在田头种下了第一批竹。自包了村里的山后，他种竹的劲头更大了，他在承包的山边空隙处、家里的自留地等处种下了竹子。现在，他的竹林总计达20多亩，每年可挖不少的鲜笋上市，总价值超过万元。</p><p style=\"text-indent: 2em; line-height: 1.5em;\">山上空地多，与外界接触少，疾病传播渠道少，适宜于养鸡。1999年，曹宗成开始养鸡，数量达300只，收入超过千元。在之后的几年里，他不断追加投资，加大养鸡批次，收入也随之跟着增加。2003年。。。</p>');
+INSERT INTO `mytc_bis_account` VALUES ('10', 'admin', '749050132006298febb377aebb740bf1', '2824', '15', '', '0', '1', '0', '1', '1499158382', '1499158382', '<p>dfsdafsdfa</p>', '<p>dfsdf</p>', '<p>dsfasf</p>', '<p>dsfafd</p>');
 
 -- ----------------------------
 -- Table structure for `mytc_bis_location`
@@ -169,7 +171,7 @@ CREATE TABLE `mytc_bis_location` (
   KEY `bis_id` (`bis_id`),
   KEY `category_id` (`category_id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mytc_bis_location
@@ -188,6 +190,7 @@ INSERT INTO `mytc_bis_location` VALUES ('11', '宏波养殖实业有限公司', 
 INSERT INTO `mytc_bis_location` VALUES ('12', '宏波养殖实业有限公司', '/shop/public/upload\\20170630\\7e6d33a093c6480dd945039c01d0efff.gif', '中国四川德阳市四川省德阳市中江县双龙镇 ', '13881801576', '陈波', '', '', '', '12', '2017', '1', '中国四川德阳市四川省德阳市中江县双龙镇 ', '1', '5', '5', '', '54456565466545612', '0', '0', '1498814453', '1498814790');
 INSERT INTO `mytc_bis_location` VALUES ('13', '宏波养殖实业有限公司', '/shop/public/upload\\20170630\\d1f3bf0609c08e174112ff3ad2a6297d.gif', '中国四川德阳市四川省德阳市中江县双龙镇 ', '13881801576', '陈波', '<p><strong style=\"line-height: 24px; white-space: normal;\">宏波养殖实业有限公司</strong><span style=\"line-height: 24px;\">创立于2009年，是中江县一家集养殖、种植、餐饮、地产、矿产和网络为一体的多元化民营企业。现有员工122人，其中高级技术人员及管理人员15人。公司自成立以来，本着以诚信为本求实创新、勇于开拓的精神，大力进行企业经营结构调整，为力争三年内成为中江的龙头企业，五年内成为四川知名企业，十年后成', '', '', '13', '2017', '1', '中国四川德阳市四川省德阳市中江县双龙镇 ', '1', '5', '5', '18', '54864165613265', '0', '0', '1498815850', '1498816015');
 INSERT INTO `mytc_bis_location` VALUES ('14', '宏波养殖实业有限公司', '/shop/public/upload\\20170630\\d1f3bf0609c08e174112ff3ad2a6297d.gif', '中国四川德阳市四川省德阳市中江县双龙镇 ', '13881801576', '陈波', '<p><strong style=\"line-height: 24px; white-space: normal;\">宏波养殖实业有限公司</strong><span style=\"line-height: 24px;\">创立于2009年，是中江县一家集养殖、种植、餐饮、地产、矿产和网络为一体的多元化民营企业。现有员工122人，其中高级技术人员及管理人员15人。公司自成立以来，本着以诚信为本求实创新、勇于开拓的精神，大力进行企业经营结构调整，为力争三年内成为中江的龙头企业，五年内成为四川知名企业，十年后成', '', '', '14', '2017', '1', '中国四川德阳市四川省德阳市中江县双龙镇 ', '1', '5', '5', '18', '54864165613265', '0', '1', '1498815868', '1498816544');
+INSERT INTO `mytc_bis_location` VALUES ('15', 'ddfds ', '/shop/public/upload\\20170704\\b979034ce3f924113c2c0d863400a240.jpg', 'dfdfa', '4654645', 'fgsa', '<p>dfdfsd</p>', '', '', '15', '2017', '1', 'dfdfa', '1', '2', '2', '14', '45646465', '0', '1', '1499158382', '1499158382');
 
 -- ----------------------------
 -- Table structure for `mytc_category`
@@ -309,28 +312,6 @@ INSERT INTO `mytc_deal` VALUES ('7', '供应特产极品海参', '6', '0', '7', 
 INSERT INTO `mytc_deal` VALUES ('8', '供应特产极品海参', '6', '0', '7', '', '0', '0', '/shop/public/upload\\20170629\\52d4ecdac30a2320d635f158880daa62.gif', '<p>&nbsp; 经审核批准，5种食品添加剂新品种包括焦磷酸一氢三钠、氧化亚氮、乳糖酶、柠檬酸钙(三水)、右旋糖酐酶。<br/>&nbsp;&nbsp;&nbsp;&nbsp;此外，卫生部还批准乳酸钙等13种食品添加剂、白油(液体石蜡)等5种食品用加工助剂和铁等8种食品营养强化剂扩大使用范围及用量，增补已批准食品添加剂葡萄糖酸-δ-内酯的质量规格要求......</p>', '454.00', '1', '0', '200', '', '', '3', '0.00', '11', '1', '1498717750', '1498718809', '2017');
 
 -- ----------------------------
--- Table structure for `mytc_featured`
--- ----------------------------
-DROP TABLE IF EXISTS `mytc_featured`;
-CREATE TABLE `mytc_featured` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `type` tinyint(1) NOT NULL DEFAULT '0',
-  `title` varchar(30) NOT NULL DEFAULT '',
-  `image` varchar(255) NOT NULL DEFAULT '',
-  `url` varchar(255) NOT NULL DEFAULT '',
-  `description` varchar(255) NOT NULL DEFAULT '',
-  `listorder` int(8) unsigned NOT NULL DEFAULT '0',
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  `create_time` int(11) unsigned NOT NULL DEFAULT '0',
-  `update_time` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of mytc_featured
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `mytc_inquiry`
 -- ----------------------------
 DROP TABLE IF EXISTS `mytc_inquiry`;
@@ -416,6 +397,59 @@ INSERT INTO `mytc_news` VALUES ('11', '国庆将至 四川内江提前入..', '<
 INSERT INTO `mytc_news` VALUES ('12', '国庆节前山东青水果价格..', '<p>国庆节前山东青水果价格..</p>', '9', '0', '', '0', '1', '1498731508', '1498731508');
 
 -- ----------------------------
+-- Table structure for `mytc_order`
+-- ----------------------------
+DROP TABLE IF EXISTS `mytc_order`;
+CREATE TABLE `mytc_order` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `out_number` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `pay_status` int(11) NOT NULL,
+  `pay_in` int(11) NOT NULL,
+  `total_price` decimal(20,2) NOT NULL DEFAULT '0.00',
+  `address` varchar(60) NOT NULL DEFAULT '''''',
+  `listorder` int(8) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `create_time` int(11) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mytc_order
+-- ----------------------------
+INSERT INTO `mytc_order` VALUES ('1', '878121499161621', '1', '1', '0', '273660.00', '\'\'', '0', '1', '1499161621', '1499416926');
+INSERT INTO `mytc_order` VALUES ('2', '715791499414261', '1', '1', '0', '264.00', '\'\'', '0', '1', '1499414261', '1499414270');
+
+-- ----------------------------
+-- Table structure for `mytc_order_deal`
+-- ----------------------------
+DROP TABLE IF EXISTS `mytc_order_deal`;
+CREATE TABLE `mytc_order_deal` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `out_number` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `deal_id` int(11) NOT NULL,
+  `deal_name` varchar(100) NOT NULL DEFAULT '',
+  `image` varchar(200) NOT NULL DEFAULT '',
+  `price` decimal(20,2) NOT NULL DEFAULT '0.00',
+  `count` int(11) NOT NULL DEFAULT '0',
+  `listorder` int(8) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `create_time` int(11) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mytc_order_deal
+-- ----------------------------
+INSERT INTO `mytc_order_deal` VALUES ('27', '878121499161621', '1', '4', '中江白芍', '/shop/public/upload\\20170629\\3f57c3042ffb8e0971d1997d5dbc9842.gif', '66.00', '10', '0', '1', '1499161621', '1499416906');
+INSERT INTO `mytc_order_deal` VALUES ('28', '878121499161621', '1', '1', '中江柚', '/shop/public/upload\\20170629\\1d39f5e8c43f1862d2c698622b79461b.gif', '7500.00', '7', '0', '1', '1499161681', '1499416904');
+INSERT INTO `mytc_order_deal` VALUES ('29', '878121499161621', '1', '2', '中江瓜蒌', '/shop/public/upload\\20170629\\2fec158eec098e33b52277081880238b.gif', '4500.00', '49', '0', '1', '1499161884', '1499416899');
+INSERT INTO `mytc_order_deal` VALUES ('30', '715791499414261', '1', '4', '中江白芍', '/shop/public/upload\\20170629\\3f57c3042ffb8e0971d1997d5dbc9842.gif', '66.00', '4', '0', '1', '1499414261', '1499414269');
+
+-- ----------------------------
 -- Table structure for `mytc_toupiao`
 -- ----------------------------
 DROP TABLE IF EXISTS `mytc_toupiao`;
@@ -453,8 +487,35 @@ CREATE TABLE `mytc_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mytc_user
 -- ----------------------------
+INSERT INTO `mytc_user` VALUES ('1', 'user', '08185c52598d6af8bca128e34cd3498f', '50638', '', '0', '75757654654@qq.com.cm', '', '0', '1', '1499075151', '1499075151');
+
+-- ----------------------------
+-- Table structure for `mytc_user_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `mytc_user_info`;
+CREATE TABLE `mytc_user_info` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(20) NOT NULL DEFAULT '',
+  `recipients` varchar(10) NOT NULL DEFAULT '',
+  `mobile` varchar(20) NOT NULL DEFAULT '',
+  `city_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `se_city_id` varchar(30) NOT NULL DEFAULT '',
+  `address` varchar(20) NOT NULL DEFAULT '',
+  `zcode` int(8) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `create_time` int(11) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mytc_user_info
+-- ----------------------------
+INSERT INTO `mytc_user_info` VALUES ('2', '', '李小鸟', '45664651', '1', '5', '小鸟村2组', '112035', '1', '1499416659', '1499416659');
+INSERT INTO `mytc_user_info` VALUES ('3', '1', '李米华', '6545656', '1', '4', '光伏街道', '7978', '1', '1499416746', '1499416746');

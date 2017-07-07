@@ -73,9 +73,18 @@ class Proinfo extends Controller
     {
 
         $citys=model('City')->getNormalCity();
+        $address=model('UserInfo')->getAddress(session('user')->id);
+        $addresscity=model('City')->getCitys();
+        foreach($addresscity as $adres)
+        {
+            $adrcity[$adres->id]=$adres->name;
+        }
+        //halt($adrcity);
         $this->assign([
             'controller'=>'deal',
             'citys'=>$citys,
+            'address'=>$address,
+            'adrcity'=>$adrcity,
         ]);
         return $this->fetch();
     }

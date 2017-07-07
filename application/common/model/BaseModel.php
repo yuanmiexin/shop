@@ -14,7 +14,9 @@ class BaseModel extends Model
         {
             $data['is_main']=1;
         }
+
         $result=$this->allowField(true)->save($data);
+        //halt($result);
         /*if($result)
         {
             return ['valid'=>1,'msg'=>'更新成功'];
