@@ -1,0 +1,111 @@
+{extend name='base'/}
+{block name='left'}
+    <div class="neiyeL">
+        <div class="banL noel">
+            <div class="yuyue">
+                <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
+                    中江瓜蒌</a></p>
+                <p><a href="#" class="yuyue_a"></a></p>
+            </div>
+        </div>
+        <div class="hezuo">
+            <div class="hezuo_top">推荐合作单位</div>
+            <div class="hezuo_text">
+                <ul>
+                    <li><a href="#"><img src="__STATIC__/home/text/9.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/10.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/11.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/12.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/13.gif" width="206" height="60" alt="" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}
+{block name='right'}
+<div class="neiyeR">
+<div class="contRight" style="border:0;">
+    <div class="proBox">
+        <div id="tsShopContainer">
+            <div id="tsImgS"><a href="{$deal.image}" title="Images" class="MagicZoom" id="MagicZoom">
+                <img  src="{$deal.image}" /></a></div>
+            <div id="tsPicContainer">
+                <div id="tsImgSArrL" onclick="tsScrollArrLeft()"></div>
+                <div id="tsImgSCon">
+                    <ul>
+
+                        <li onclick="showPic(0)" rel="MagicZoom" class="tsSelectImg"><img height="42" width="42" src="{$deal.image}" tsImgS="{$deal.image}" /></li>
+
+                    </ul>
+                </div>
+                <div id="tsImgSArrR" onclick="tsScrollArrRight()"></div>
+            </div>
+            <img class="MagicZoomLoading" width="16" height="16" src="__STATIC__/home/images/loading.gif" alt="Loading..." />
+            <script src="__STATIC__/home/js/ShopShow.js"></script>
+        </div><!--tsShopContainer/-->
+        <div class="proBoxRight">
+            <h3 class="proTitle">{$deal.name}</h3>
+            <!--<div>商品编号： 334011 </div>-->
+            <div>产品类别： {$cate.name} </div>
+            <div>会员价：<strong class="red">¥{$deal.origin_price}</strong> </div>
+            <div>产品规格：{$deal.format} </div>
+            <div>上架时间：{$deal.start_time} </div>
+            <div>库存：{if $deal.total_count > 0 }<strong class="red">[有货] </strong>{$deal.total_count} {else}<strong>[缺货] </strong>{/if}</div>
+            <ul class="rongliang">
+                <input type="hidden" value="{$status}" id="status"/>
+                <div class="clears"></div>
+            </ul><!--rongliang/-->
+            <div class="shuliang2">
+                <p class="prod_pad">
+                    <span class="l">购买数量：</span>
+                    <a href="#" class="prod_jia"></a>
+                    <input name="count" type="text" class="prod_tetx"  value="{$deal.count}" style="height:24px"/>
+                    <a href="#" class="prod_jian"></a>
+                </p>
+            </div><!--shuliang2/-->
+            <div class="gc">
+                <a href="{:url('order/index',['id'=>$deal.id,'count'=>$deal.count])}"><img src="__STATIC__/home/images/goumai.png" width="117"  height="36" /></a>&nbsp;&nbsp;
+              <!--  <a href="#"><img src="__STATIC__/home/images/shoucang.png" width="117" height="36" /></a>-->
+            </div><!--gc/-->
+        </div><!--proRight/-->
+        <div class="clears"></div>
+    </div><!--proBox/-->
+    <ul class="fangyuan">
+        <li>商品描述</li>
+        <li>商品参数</li>
+        <li>商品评论</li>
+        <li>商品晒图</li>
+        <div class="clears"></div>
+    </ul><!--fangyuan/-->
+    <div class="fangList">
+        <div class="fangPar">
+          {$deal.description}
+        </div><!--fangPar/-->
+        <img src="{$deal.image}" width="330" height="310" />
+    </div><!--fangList/-->
+    <div class="fangList">
+        商品参数
+    </div><!--fangList/-->
+    <div class="fangList">
+        商品评论
+    </div><!--fangList/-->
+    <div class="fangList">
+
+        <img src="{$deal.image}" width="132" height="129" /><br /><br />
+
+    </div><!--fangList/-->
+</div><!--contRight/-->
+</div>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
+
+<script type="text/javascript">
+var SOPE={
+    'url':"{:url('proinfo/index')}",
+    'urlse':"{:url('order/index')}",
+    'deal_id':"{$deal.id}",
+    'image_src':"__STATIC__/home/images/goumai.png",
+    'total_count':"{$deal.total_count}",
+}
+</script>
+{/block}

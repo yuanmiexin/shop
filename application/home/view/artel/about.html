@@ -1,0 +1,109 @@
+{extend name='base'/}
+{block name='left'}
+<div class="neiyeL">
+    <div class="banL noel">
+        <div class="lanmu">
+          <ul id="click">
+              {foreach name='$categorys' item='vo'}
+              <li><a href="{:url('artel/about',['name'=>$vo.uname,'id'=>$message.bis_id])}" class="{if $category.id eq $vo.id}xuanz{/if}">{$vo.name}</a></li>
+            {/foreach}
+            </ul>
+        </div>
+    </div>
+    <div class="dianhua">
+        <div class="dianhua_top">联系电话</div>
+        <div class="dianhua_text">
+            联  系  人：{$message.contact}（总裁） <br />
+            电       话 ：{$message.tel}<br />
+            移动电话 ：	138-8180-1576<br />
+            传       真 ：{$message.tel}<br />
+            地       址 ：	{$message.address}</div>
+    </div>
+</div>
+{/block}
+{block name='right'}
+<div id="block">
+    <div id="about">
+<div class="neiyeR">
+
+    {if $product}
+    <div class="neiBT">
+        <span class="mianT_span">{$category.name} | {$category.uname}</span>
+    </div>
+    <div class="product">
+        <div class="product_top">
+            <div class="product_name">
+                <img src="{$product.image}" width="396" height="277" alt="" />
+            </div>
+            <div class="product_info">
+                <p class="prod_bt">{$product.name}</p>
+                <p>产品类别：	{$cate.name}</p>
+                <p>产品规格：	{$product.format}</p>
+                <p>产品原产地：{$city.name}</p>
+                <p>产品价格：	{$product.origin_price}</p>
+                <p>上架时间：{$product.start_time}月份</p>
+                <p class="prod_pad">
+                    <span class="l">购买数量：</span>
+                    <a href="#" class="prod_jia"></a>
+                    <input name="count" type="text" value="1" class="prod_tetx" />
+                    <a href="#" class="prod_jian"></a>
+                </p>
+                <p><a href="{:url('proinfo/order',['id'=>$product.id])}" class="prod_dg"></a></p>
+            </div>
+        </div>
+        <div class="proTd">
+            <div class="proTd_top">
+                产品特点
+            </div>
+            <div class="proTd_yte">
+                {$product.description}
+            </div>
+        </div>
+    </div>
+    {else}
+    <div class="neiBT">
+        <span class="mianT_span">{$category.name} | {$category.uname}</span>
+    </div>
+    <div class="feedbck">
+        <div class="newsxx" style="font-size:14px">
+            <p >{$information->$data}</p></div>
+    </div>
+    {/if}
+</div>
+</div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="__STATIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //alert($("#block"));
+ // alert($("#click li a").attr('href'));
+   $("#click li a").click(function ()
+    {
+        //alert('455');
+
+        var parame=$(this).attr('murl');
+        var url='{:url("Artel/about")}'
+        var parames={
+            'type':parame
+        };
+      // alert(url);
+       $.post(url,parames,function(result){
+
+               //alert(result.data);
+                /*var result = $(data).find("block");
+                $("#block").html(result);*/
+                var data=$("#"+result.data);
+               // alert(data);
+                $('#block').html('');
+                $('#block').append(data);
+
+        },'json');
+
+    })
+
+</script>
+{/block}

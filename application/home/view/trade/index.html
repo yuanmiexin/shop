@@ -1,0 +1,64 @@
+{extend name='base'/}
+{block name='left'}
+    <div class="neiyeL">
+        <div class="banL noel">
+            <div class="yuyue">
+                <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
+                    中江瓜蒌</a></p>
+                <p><a href="#" class="yuyue_a"></a></p>
+            </div>
+        </div>
+        <div class="hezuo">
+            <div class="hezuo_top">推荐合作单位</div>
+            <div class="hezuo_text">
+                <ul>
+                    <li><a href="#"><img src="__STATIC__/home/text/9.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/10.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/11.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/12.gif" width="206" height="60" alt="" /></a></li>
+                    <li><a href="#"><img src="__STATIC__/home/text/13.gif" width="206" height="60" alt="" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}
+{block name='right'}
+    <div class="neiyeR">
+        <div class="neiBT">
+            <span class="mianT_span">行业信息 | INFORMATION </span>
+        </div>
+        <div class="neiText">
+            <div class="neiIfino">
+                <ul>
+                    {foreach name='category' item='vo'}
+                    <li class="l"><a href="#" class="{if $vo.id}xuanz{/if}">{$vo.name}</a>|</li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="haide">
+                <div class="haide_te">
+                    <a href="#"><img src="{$deal.image}" width="208" height="142" alt="" /></a>
+                    <h1><a href="#" class="haide_h1">{$deal.name}</a></h1>{$deal.description}
+                </div>
+                <div class="nawsTe">
+                    <ul>
+                        {foreach name='$inquiry' item='vo'}
+                        <li><span>{$vo.create_time|@date='y-m-d',###}</span><a href="#">&middot;{$vo.content}</a> </li>
+                       {/foreach}
+                    </ul>
+                </div>
+                <div class="feiye">
+                    <ul>
+                        <li><input type="submit" value="确定" class="feiye_ban" />
+                        <li>到第<input name="" type="text" class="feiye_ingp" />页</li>
+                        <li><a href="#">下一页</a></li>
+                        {$inquiry->render()}
+                        <li><a href="#" class="feiye_hs">上一页</a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

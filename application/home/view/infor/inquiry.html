@@ -1,0 +1,57 @@
+{extend name='base'/}
+{block name='left'}
+<div class="neiyeL">
+    <div class="banL noel">
+        <div class="yuyue">
+            <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
+                中江瓜蒌</a></p>
+            <p><a href="#" class="yuyue_a"></a></p>
+        </div>
+    </div>
+    <div class="hezuo">
+        <div class="hezuo_top">推荐合作单位</div>
+        <div class="hezuo_text">
+            <ul>
+                <li><a href="#"><img src="__STATIC__/home/text/9.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/10.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/11.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/12.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/13.gif" width="206" height="60" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{/block}
+{block name='right'}
+<div class="neiyeR">
+    <div class="neiBT">
+        <span class="mianT_span">我要求购 | INQUIRY </span>
+    </div>
+    <div class="feedbck">
+        <form action="{:url('infor/inquiry')}" method="post">
+            <div class="feedb_top">
+                <div class="feedb_bate">
+                    <table width="200" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="44" class="feedb_td">联系人：</td>
+                            <td><input name="contact" type="text" class="feedb_input" /><span class="feedb_span">*</span></td>
+                        </tr>
+                        <tr>
+                            <td height="44" class="feedb_td">联系电话：</td>
+                            <td><input name="mobile" type="text"  class="feedb_input"/><span class="feedb_span">*</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feedb_td">内容：</td>
+                            <td><textarea name="content" cols="" rows="" class="feedb_tarea"></textarea></td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="feedb_tetx">
+                    <input type="submit" class="feedb_annl" value="提交" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}

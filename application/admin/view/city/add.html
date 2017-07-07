@@ -1,0 +1,66 @@
+{include file='public/header'/}
+
+<section style="overflow: hidden;padding:20px">
+<div >
+    <form action="" method="post" class="form form-horizontal" id="form-category-add">
+        <div id="tab-category" class="HuiTab">
+            <div class="tabCon1">
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>分类名称：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" value=""   name="name">
+                    </div>
+                    <div class="col-3"> </div>
+                </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>别名：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" value=""   name="uname">
+                    </div>
+                    <div class="col-3"> </div>
+                </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上级栏目：</label>
+                    <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+							<select class="select" id="sel_Sub" name="parent_id">
+                                <option value="0">顶级分类</option>
+                                {foreach name='citys' item='vo'}
+                                {if $vo.parent_id neq 0}
+                                <option value="{$vo.id}">-{$vo.name}</option>
+                                {else}
+                                <option value="{$vo.id}">{$vo.name}</option>
+                                {/if}
+                                {/foreach}
+                            </select>
+							</span> </div>
+                    <div class="col-3"> </div>
+                </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-3">排序：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" value="100"   name="listorder">
+                    </div>
+                    <div class="col-3"> </div>
+                </div>
+
+            </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+        </div>
+    </form>
+</div></section>
+{include file='public/footer'/}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+
+</body>
+</html>

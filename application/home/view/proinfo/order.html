@@ -1,0 +1,194 @@
+{extend name='base'/}
+{block name='left'}
+    <div class="neiyeL">
+        <div class="banL noel">
+            <div class="yuyue">
+                <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
+                    中江瓜蒌</a></p>
+                <p><a href="#" class="yuyue_a"></a></p>
+            </div>
+        </div>
+
+    </div>
+{/block}
+{block name='right'}
+<div class="neiyeR">
+<div class="cont" >
+    <div class="carImg"><img src="__STATIC__/home/images/car1.jpg" width="715" height="27" /></div>
+    <table class="orderList" style="font-size:12px">
+        <tr >
+            <th width="20"></th>
+            <th width="330">商品</th>
+            <th width="100">单价</th>
+            <th width="100">数量</th>
+            <th width="100">总金额</th>
+            <th>操作</th>
+        </tr>
+        <tbody id="tab">
+        {foreach name='$deals' item='vo'}
+        <tr >
+            <td><input type="checkbox" /></td>
+            <td>
+                <dl>
+                    <dt><a href="{:url('home/proinfo/index',['id'=>$vo.deal_id])}"><img src="{$vo.image}" width="85" height="85" /></a></dt>
+                    <dd>{$vo.deal_name}<br /><span class="red">有货：</span>从上海出发</dd>
+                    <div class="clears"></div>
+                </dl>
+            </td>
+            <td><strong class="red">￥{$vo.price}</strong></td>
+            <td>
+                <div class="jia_jian">
+                    <img src="__STATIC__/home/images/jian.jpg" width="21" height="25" id="{$vo.id}" class="jian"/>
+                    <input type="text" class="shuliang" id="count{$vo.id}"  d-id="{$vo.id}" value="{$vo.count}" />
+                    <input type="hidden"  id="total_count{$vo.id}" value="{$total_count[$vo.deal_id]}" />
+                    <img src="__STATIC__/home/images/jia.jpg" width="21" height="25" id="{$vo.id}" class="jia" />
+                </div>
+            </td>
+            <td><strong class="red" id="total_price{$vo.id}">￥<span class="price">{$vo.price*$vo.count}</span></strong></td>
+            <td><a href="#" class="green">收藏</a><br /><a href="{:url('home/order/status',['id'=>$vo.id,'status'=>-1])}" class="green">删除</a></td>
+        </tr>
+         {/foreach}
+        </tbody>
+        <tr>
+            <td colspan="6"><div class="shanchu"><img src="__STATIC__/home/images/lajio.jpg" /> 全部删除</div></td>
+        </tr>
+    </table><!--orderList/-->
+    <div class="zongji">
+        总计(不含运费)：<strong class="red">￥<span id="total"></span></strong>
+    </div><!--zongji/-->
+    <div class="jiesuan" style="margin-bottom: 10px">
+        <a href="{:url('deal/index')}" class="jie_1">继续购物&gt;&gt;</a>
+        <a href="" class="jie_2">立即结算&gt;&gt;</a>
+        <div class="clears"></div>
+    </div><!--jiesuan/-->
+    <div class="clears"></div>
+</div><!--cont/-->
+</div>
+</div>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/home/js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $(".jia").click(function(){
+
+        var id=$(this).attr('id');
+        var total_count=$('#total_count'+id).val();
+        var count=$('#count'+id).val();
+      // alert(total_count);
+        var url="{:url('order/dealcount')}";
+
+        count++;
+        if(count<=total_count)
+        {
+
+            var postdata={
+                'count':count,
+                'id':id,
+            };
+            $.get(url,postdata,function(resunlt){
+                //alert(resunlt);
+                   var total_price=resunlt.data.count*resunlt.data.price;
+                   //alert(total_price);
+
+                $('#count'+id).val(resunlt.data.count);
+                $('#total_price'+id+' span').html(total_price);
+
+                setTotal();
+            },'json');
+
+        }else{
+            alert('库存不足');
+            return false;
+        }
+
+    });
+
+    $(".jian").click(function(){
+
+        var id=$(this).attr('id');
+        var total_count=$('#total_count'+id).val();
+        var count=$('#count'+id).val();
+        // alert(total_count);
+        var url="{:url('order/dealcount')}";
+        count=count-1;
+        if(count>1)
+        {
+
+            var postdata={
+                'count':count,
+                'id':id,
+            };
+            $.get(url,postdata,function(resunlt){
+                //alert(resunlt);
+                var total_price=resunlt.data.count*resunlt.data.price;
+                //alert(total_price);
+
+                $('#count'+id).val(resunlt.data.count);
+                $('#total_price'+id+' span').html(total_price);
+                setTotal();
+            },'json');
+
+        }else{
+            alert('库存不足');
+            return false;
+        }
+
+    });
+
+    $(".shuliang").blur(function(){
+
+        var id=$(this).attr('d-id');
+        //alert(id);
+
+        var count=$(this).val();
+        // alert(total_count);
+        var url="{:url('order/dealcount')}";
+
+
+        // alert(id);
+        if(count>0 && count<=total_count)
+        {
+            var postdata={
+                'count':count,
+                'id':id,
+            };
+            $.get(url,postdata,function(resunlt){
+                //alert(resunlt);
+                var total_price=resunlt.data.count*resunlt.data.price;
+                //alert(total_price);
+
+                $('#count'+id).val(resunlt.data.count);
+                $('#total_price'+id+' span').html(total_price);
+                setTotal();
+            },'json');
+
+        }else if(count<=0){
+            alert('请输入正确的数量');
+            return false;
+        }else {
+            alert('库存不足');
+            return false;
+        }
+
+    });
+
+    function setTotal(){
+        var s=0;
+        $("#tab tr").each(function(){
+            s+=parseFloat($(this).find('span[class*=price]').text());
+        });
+        //var price=md5(s);
+        //alert(price);
+        var urlse="{:url('order/orderaccount',['status'=>1,'out_number'=>$out_number])}"+"&total_price="+s;
+
+        $("#total").html(s.toFixed(2));
+        $(".jie_2").attr("href",urlse)
+    }
+    setTotal();
+
+
+})
+</script>
+{/block}

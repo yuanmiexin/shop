@@ -1,0 +1,50 @@
+<!--包含头部文件-->
+{include file="public/header" /}
+<link type="text/css" href="__STATIC__/home/css/style.css" rel="stylesheet" rev="stylesheet" media="screen" />
+<div class="centBox">
+  <div class="top">
+    <span>【<a href="{:url('home/login/index')}">登录</a> 】 【<a href="{:url('bis/login/index')}">申请入驻</a>】  【<a href="{:url('home/deal/index')}">前往采购</a>】
+      【<a href="{:url('home/infor/index')}">联系我们</a>】</span>
+    您好！欢迎来到中江县名优产品展销平台!     您遇到任何疑问请致电：0838 -6668888
+  </div>
+  <div class="top2">
+
+    <div class="logo">
+      <a href="{:url('index/index')}" class="logo_a"></a>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="TenantId" name="TenantId" value="" />
+<div class="header" ><h1 style="text-align:center;line-height: 2em">商户登录系统</h1></div>
+<div class="loginWraper">
+
+  <div id="loginform" class="loginBox">
+
+    <form class="form form-horizontal" action="" method="post">
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+        <div class="formControls col-xs-8">
+          <input  name="username" type="text" placeholder="账户" class="input-text size-L" style="width:700px">
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-xs-8">
+          <input  name="password" type="password" placeholder="密码" class="input-text size-L" style="width:700px">
+        </div>
+      </div>
+
+
+      <div class="row cl" style="margin-left: 150px;">
+        <div class="formControls col-xs-8 col-xs-offset-3">
+          <input name="" type="submit" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
+          <a href="{:url('register/index')}" class="btn btn-success radius size-L">&nbsp;申请&nbsp;&nbsp;&nbsp;&nbsp;入驻&nbsp;</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--包含尾部文件-->
+{include file="public/footer" /}

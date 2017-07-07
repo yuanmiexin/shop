@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>注册</title>
+    <link rel="stylesheet" href="__STATIC__/home/css/base.css" />
+    <link rel="stylesheet" href="__STATIC__/home/css/register.css" />
+    <script type="text/javascript" src="__STATIC__/home/js/html5shiv.js"></script>
+    <script type="text/javascript" src="__STATIC__/home/js/respond.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/home/js/jquery-1.11.3.min.js"></script>
+
+    <link type="text/css" href="__STATIC__/home/css/style.css" rel="stylesheet" rev="stylesheet" media="screen" />
+</head>
+<body>
+<div class="centBox wrapper">
+    <div class="top">
+        <span>【<a href="{:url('home/login/index')}">登陆</a> 】 【<a href="{:url('bis/login/index')}">申请入驻</a>】  【<a href="{:url('home/deal/index')}">前往采购</a>】
+            【<a href="{:url('home/infor/index')}">联系我们</a>】</span>
+        您好！欢迎来到中江县名优产品展销平台!     您遇到任何疑问请致电：0838 -6668888
+    </div>
+    <div class="top2">
+        <div class="login-link">
+            <span>我已注册，现在就</span>
+            <a href="{:url('home/login/index')}">登录</a>
+        </div>
+        <div class="logo">
+            <a href="{:url('index/index')}" class="logo_a">中江名优特产</a>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <form action="{:url('home/login/register')}" method="post" style="margin-top: 0px;width:700px">
+            <p class="pass-form-item">
+                <label class="pass-label">用户名</label>
+            <p><input type="text" name="username" class="pass-text-input" placeholder="请设置用户名">
+            <label style="font-size:16px;line-height:2.5em" id="username"></label></p>
+            </p>
+            <p class="pass-form-item">
+                <label class="pass-label">邮箱号</label>
+            <p> <input type="text" name="email" class="pass-text-input" placeholder="可用于接受团购券账号和密码便于消费">
+            <label style="font-size:16px;line-height:2.5em" id="email"></label></p>
+            </p>
+
+            <p class="pass-form-item">
+                <label class="pass-label">密码</label>
+            <p><input type="password" name="password" class="pass-text-input" placeholder="请设置登录密码">
+            <label style="font-size:16px;line-height:2.5em" id="password"></label></p>
+            </p>
+            <p class="pass-form-item">
+                <label class="pass-label">确认密码</label>
+            <p><input type="password" name="repassword" class="pass-text-input" placeholder="请设置登录密码">
+            <label style="font-size:16px;line-height:2.5em" id="repassword"></label></p>
+            </p>
+
+            <!--<p class="pass-form-item">
+                <label class="pass-label">验证码</label>
+            <p> <input type="text" name="code" class="pass-text-input " placeholder="请输入验证码">
+            <label style="font-size:16px;line-height:2.5em" id="code">&nbsp;</label></p>
+            </p>
+            <p>
+                <img src="{:captcha_src()}" alt="captcha" onclick="this.src=this.src+'?'+Math.random()"/>
+            </p>-->
+            <p class="pass-form-item">
+                <input type="submit" value="注册" class="pass-button">
+            </p>
+        </form>
+
+    </div>
+
+    <div class="foot">
+        <div>
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="__STATIC__/home/js/common.js"></script>
+<script type="text/javascript">
+      var SCOPE={
+          "url":"{:url('home/login/checked')}",
+      }
+
+
+
+
+</script>
