@@ -71,20 +71,24 @@ class Proinfo extends Controller
     //订单确认及支付方式选择页
     public function orderlist()
     {
-
+        $out_number=input('param.out_number');
+       // halt($out_number);
         $citys=model('City')->getNormalCity();
         $address=model('UserInfo')->getAddress(session('user')->id);
         $addresscity=model('City')->getCitys();
+        $deals=model('OrderDeal')->getdeals($out_number);
         foreach($addresscity as $adres)
         {
             $adrcity[$adres->id]=$adres->name;
         }
-        //halt($adrcity);
+
         $this->assign([
             'controller'=>'deal',
             'citys'=>$citys,
             'address'=>$address,
             'adrcity'=>$adrcity,
+            'deals'=>$deals,
+            'out_number'=>$out_number,
         ]);
         return $this->fetch();
     }

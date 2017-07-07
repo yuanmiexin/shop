@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f2e7618-be5f-462d-80ac-5077fca1fed2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shop.iml" afterPath="$PROJECT_DIR$/.idea/shop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/common/model/BaseModel.php" afterPath="$PROJECT_DIR$/application/common/model/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/common/model/UserInfo.php" afterPath="$PROJECT_DIR$/application/common/model/UserInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Order.php" afterPath="$PROJECT_DIR$/application/home/controller/Order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Proinfo.php" afterPath="$PROJECT_DIR$/application/home/controller/Proinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/proinfo/order.html" afterPath="$PROJECT_DIR$/application/home/view/proinfo/order.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/proinfo/orderlist.html" afterPath="$PROJECT_DIR$/application/home/view/proinfo/orderlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mytc.sql" afterPath="$PROJECT_DIR$/mytc.sql" />
     </list>
     <ignored path="shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Proinfo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Proinfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Proinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="20" />
+            <state relative-caret-position="169">
+              <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDeal.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/common/model/OrderDeal.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -54,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderlist.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orderlist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/orderlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="380">
+              <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -72,9 +78,22 @@
       <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="118" column="18" lean-forward="false" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
+            <state relative-caret-position="720">
+              <caret line="106" column="75" lean-forward="true" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/order.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="183" column="44" lean-forward="false" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +101,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="188">
               <caret line="66" column="78" lean-forward="true" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
               <folding />
             </state>
@@ -160,13 +179,13 @@
         <option value="$PROJECT_DIR$/application/home/view/public/header.html" />
         <option value="$PROJECT_DIR$/application/home/view/proinfo/index.html" />
         <option value="$PROJECT_DIR$/public/static/home/js/common.js" />
-        <option value="$PROJECT_DIR$/application/home/view/proinfo/order.html" />
         <option value="$PROJECT_DIR$/public/static/admin/js/common.js" />
-        <option value="$PROJECT_DIR$/application/home/controller/Order.php" />
         <option value="$PROJECT_DIR$/application/common/model/BaseModel.php" />
         <option value="$PROJECT_DIR$/application/common/model/UserInfo.php" />
-        <option value="$PROJECT_DIR$/application/home/controller/Proinfo.php" />
+        <option value="$PROJECT_DIR$/application/home/view/proinfo/order.html" />
         <option value="$PROJECT_DIR$/application/home/view/proinfo/orderlist.html" />
+        <option value="$PROJECT_DIR$/application/home/controller/Order.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Proinfo.php" />
       </list>
     </option>
   </component>
@@ -687,12 +706,12 @@
       <updated>1497937512634</updated>
       <workItem from="1498448022370" duration="124058000" />
       <workItem from="1498878874401" duration="13371000" />
-      <workItem from="1499390920544" duration="19769000" />
+      <workItem from="1499390920544" duration="22056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157198000" />
+    <option name="totallyTimeSpent" value="159485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -704,7 +723,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17609255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -749,13 +768,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/view/union/unionlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/Register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1088,14 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="66" column="78" lean-forward="true" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/home/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1119,17 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1146,6 +1139,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="183" column="44" lean-forward="false" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="66" column="78" lean-forward="true" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/City.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1154,32 +1166,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Order.php">
+    <entry file="file://$PROJECT_DIR$/application/common/model/OrderDeal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="118" column="18" lean-forward="false" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Proinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="20" />
+        <state relative-caret-position="285">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/proinfo/orderlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="380">
+          <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="106" column="75" lean-forward="true" selection-start-line="106" selection-start-column="75" selection-end-line="106" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Proinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

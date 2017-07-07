@@ -30,7 +30,7 @@
             </tr>
             {/foreach}
         </table><!--ord/-->
-        <form action="{:url('home/order/addressadd')}" method="post">
+        <form action="{:url('home/order/addressadd',['out_number'=>$out_number])}" method="post">
         <div class="address" style="font-size:12px">
             <div class="addList">
                 <label><span class="red">* </span>选择地区:</label>
@@ -83,12 +83,13 @@
                 <th width="100">总金额</th>
                 <th width="40">操作</th>
             </tr>
+
             <tr>
                 <td><input type="checkbox" /></td>
                 <td>
                     <dl>
                         <dt><a href="proinfo.html"><img src="__STATIC__/home/images/pro1.jpg" width="85" height="85" /></a></dt>
-                        <dd>全球最大的中文搜索引擎、致力于让网民更便捷<br /><span class="red">有货：</span>从上海出发</dd>
+                        <dd>{}<br /><span class="red">有货：</span>从上海出发</dd>
                         <div class="clears"></div>
                     </dl>
                 </td>
@@ -100,69 +101,10 @@
                         <img src="__STATIC__/home/images/jia.jpg" width="21" height="25" class="jia" />
                     </div>
                 </td>
-                <td><strong class="red">￥70.20</strong></td>
+                <td><strong class="red">￥{}</strong></td>
                 <td><a href="#" class="green">收藏</a><br /><a href="#" class="green">删除</a></td>
             </tr>
-            <tr>
-                <td><input type="checkbox" /></td>
-                <td>
-                    <dl>
-                        <dt><a href="proinfo.html"><img src="__STATIC__/home/images/pro1.jpg" width="85" height="85" /></a></dt>
-                        <dd>全球最大的中文搜索引擎、致力于让网民更便捷<br /><span class="red">有货：</span>从上海出发</dd>
-                        <div class="clears"></div>
-                    </dl>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td>
-                    <div class="jia_jian">
-                        <img src="__STATIC__/home/images/jian.jpg" width="21" height="25" class="jian" />
-                        <input type="text" class="shuliang" value="1" />
-                        <img src="__STATIC__/home/images/jia.jpg" width="21" height="25" class="jia" />
-                    </div>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td><a href="#" class="green">收藏</a><br /><a href="#" class="green">删除</a></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" /></td>
-                <td>
-                    <dl>
-                        <dt><a href="proinfo.html"><img src="__STATIC__/home/images/pro1.jpg" width="85" height="85" /></a></dt>
-                        <dd>全球最大的中文搜索引擎、致力于让网民更便捷<br /><span class="red">有货：</span>从上海出发</dd>
-                        <div class="clears"></div>
-                    </dl>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td>
-                    <div class="jia_jian">
-                        <img src="__STATIC__/home/images/jian.jpg" width="21" height="25" class="jian" />
-                        <input type="text" class="shuliang" value="1" />
-                        <img src="__STATIC__/home/images/jia.jpg" width="21" height="25" class="jia" />
-                    </div>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td><a href="#" class="green">收藏</a><br /><a href="#" class="green">删除</a></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" /></td>
-                <td>
-                    <dl>
-                        <dt><a href="proinfo.html"><img src="__STATIC__/home/images/pro1.jpg" width="85" height="85" /></a></dt>
-                        <dd>全球最大的中文搜索引擎、致力于让网民更便捷<br /><span class="red">有货：</span>从上海出发</dd>
-                        <div class="clears"></div>
-                    </dl>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td>
-                    <div class="jia_jian">
-                        <img src="__STATIC__/home/images/jian.jpg" width="21" height="25" class="jian" />
-                        <input type="text" class="shuliang" value="1" />
-                        <img src="__STATIC__/home/images/jia.jpg" width="21" height="25" class="jia" />
-                    </div>
-                </td>
-                <td><strong class="red">￥70.20</strong></td>
-                <td><a href="#" class="green">收藏</a><br /><a href="#" class="green">删除</a></td>
-            </tr>
+
             <tr>
                 <td colspan="6"><div class="shanchu"><img src="__STATIC__/home/images/lajio.jpg" /> 全部删除</div></td>
             </tr>

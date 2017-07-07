@@ -108,7 +108,7 @@ class Order extends Base
            }
         }
 
-        public function addressadd()
+        public function addressadd($out_number)
         {
             if(request()->isPost())
             {
@@ -119,7 +119,7 @@ class Order extends Base
                 //halt($res);
                 if($res)
                 {
-                   return $this->success('收件地址添加成功','home/proinfo/orderlist');
+                   return $this->success('收件地址添加成功','home/proinfo/orderlist?out_number='.$out_number);
                 }
             }
         }
