@@ -106,7 +106,7 @@ class Build
         if (empty($list)) {
             // 创建默认的模块目录和文件
             $list = [
-                '__file__' => ['config.php', 'common.php'],
+                '__file__' => ['Config.php', 'common.php'],
                 '__dir__'  => ['controller', 'model', 'view'],
             ];
         }
@@ -192,7 +192,7 @@ class Build
      */
     protected static function buildCommon($module)
     {
-        $filename = CONF_PATH . ($module ? $module . DS : '') . 'config.php';
+        $filename = CONF_PATH . ($module ? $module . DS : '') . 'Config.php';
         if (!is_file($filename)) {
             file_put_contents($filename, "<?php\n//配置文件\nreturn [\n\n];");
         }

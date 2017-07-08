@@ -1,4 +1,5 @@
 {include file='public/header'/}
+<body>
 <!--_header 作为公共模版分离出去-->
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
@@ -51,16 +52,17 @@
     <div class="menu_dropdown bk_2">
         {foreach name='$menu' item='vo'}
         <dl id="menu-article">
-            <dt><i class="Hui-iconfont">&#xe616;</i>{$vo.name}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
+            <dt class="selected"><i class="Hui-iconfont">&#xe616;</i> {$vo.name}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd style="display:none">
                 <ul>
-                    {foreach name='$vo.cate' item='va'}
-                    <li><a href="{:url($va.url)}" title="{$va.name}">{$va.name}</a></li>
+                    {foreach name="$vo['cate']" item='va'}
+                    <li><a data-href="{:url($va.url)}" data-title="{$va.name}" href="javascript:void(0)">{$va.name}</a></li>
                     {/foreach}
                 </ul>
             </dd>
         </dl>
         {/foreach}
+
     </div>
 </aside>
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>

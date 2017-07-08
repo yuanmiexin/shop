@@ -377,7 +377,7 @@ CREATE TABLE `mytc_news` (
   `create_time` int(11) unsigned NOT NULL DEFAULT '0',
   `update_time` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `news_category_id` (`category_id`)
+  KEY `category_id` (`category_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -519,3 +519,18 @@ CREATE TABLE `mytc_user_info` (
 -- ----------------------------
 INSERT INTO `mytc_user_info` VALUES ('2', '', '李小鸟', '45664651', '1', '5', '小鸟村2组', '112035', '1', '1499416659', '1499416659');
 INSERT INTO `mytc_user_info` VALUES ('3', '1', '李米华', '6545656', '1', '4', '光伏街道', '7978', '1', '1499416746', '1499416746');
+
+
+
+DROP TABLE IF EXISTS `mytc_pay`;
+CREATE TABLE `mytc_pay` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `uname` varchar(50) NOT NULL,
+  `image` varchar(200) NOT NULL DEFAULT '',
+  `listorder` int(8) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `create_time` int(11) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
