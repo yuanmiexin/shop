@@ -3,7 +3,7 @@
 namespace app\api\controller;
 
 use think\Controller;
-use yunnpianapi\lib\SmsOperator;
+
 
 
 class Smasge extends Controller
@@ -13,13 +13,13 @@ class Smasge extends Controller
 
         //$font = new \BCGFontFile('./font/Arial.ttf', 12);
       //  return $mobile;
-        include_once '../extend/yunpianapi/YunpianAutoload.php';
+        include_once '../extend/yunpian1/YunpianAutoload.php';
           // 发送单条短信
-       $smsOperator = new SmsOperator();
+       $smsOperator = new \SmsOperator();
         $data['mobile'] =$mobile;
         $data['text'] = config("sms.text").$code;
         $result = $smsOperator->single_send($data);
         //$result = $data;
-        return $result;
+        print_r($result->requestData);
     }
 }

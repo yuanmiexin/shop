@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\orderlist.html";i:1499480847;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\orderlist.html";i:1499505002;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,7 +74,7 @@
             <?php if(is_array($address) || $address instanceof \think\Collection || $address instanceof \think\Paginator): if( count($address)==0 ) : echo "" ;else: foreach($address as $key=>$vo): ?>
             <tr>
                 <td width="30%">
-                    <input type="radio" name="user"/> <?php echo $vo['recipients']; ?>
+                    <input type="radio" name="user" value="<?php echo $vo['id']; ?>"/> <?php echo $vo['recipients']; ?>
                 </td>
                 <td width="50%">
                     <?php echo $adrcity[$vo['city_id']]; ?>,<?php echo $adrcity[$vo['se_city_id']]; ?>,<?php echo $vo['address']; ?>
@@ -155,9 +155,10 @@
                 <td><a href="#" class="green">收藏</a><br /><a href="<?php echo url('home/order/status',['id'=>$vo['id'],'status'=>-1]); ?>" class="green">删除</a></td>
             </tr>
            <?php endforeach; endif; else: echo "" ;endif; ?>
-            <!--<tr>
-                <td colspan="6"><div class="shanchu"><img src="__STATIC__/home/images/lajio.jpg" /> 全部删除</div></td>
-            </tr>-->
+            <tr >
+                <td colspan="6" ><div class="shanchu" style="float:right;font-size: 16px"><img src="__STATIC__/home/images/help4.jpg" />
+                    <a href="<?php echo url('deal/index',['out_number'=>$out_number]); ?>">继续购买</a></div></td>
+            </tr>
         </table><!--orderList/-->
         <h4 class="orderTitle">支付方式</h4>
         <ul class="zhiList">
@@ -169,50 +170,43 @@
         </ul><!--zhiList/-->
         <div class="zhifufangshi">
             <ul class="yinhang">
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin1.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin2.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin3.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin4.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin5.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin6.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin7.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin8.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin9.gif" /></li>
+                <?php if(is_array($pay) || $pay instanceof \think\Collection || $pay instanceof \think\Paginator): if( count($pay)==0 ) : echo "" ;else: foreach($pay as $key=>$vo): if($vo['type'] == 1): ?>
+                <li><input type="radio" name="pay" value="<?php echo $vo['id']; ?>" /><img src="<?php echo $vo['image']; ?>" /></li>
+                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <div class="clears"></div>
             </ul>
         </div><!--zhzhifufangshii/-->
         <div class="zhifufangshi">
             <ul class="yinhang">
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin7.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin8.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin9.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin1.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin2.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin3.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin4.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin5.gif" /></li>
-                <li><input type="radio" /><img src="__STATIC__/home/images/yin6.gif" /></li>
+                <?php if(is_array($pay) || $pay instanceof \think\Collection || $pay instanceof \think\Paginator): if( count($pay)==0 ) : echo "" ;else: foreach($pay as $key=>$vo): if($vo['type'] == 1): ?>
+                <li><input type="radio" name="pay" value="<?php echo $vo['id']; ?>"/><img src="<?php echo $vo['image']; ?>" /></li>
+                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+
                 <div class="clears"></div>
             </ul>
         </div><!--zhzhifufangshii/-->
         <div class="zhifufangshi">
             <ul class="yinhang">
-                <li><input type="radio" /><img src="__STATIC__/home/images/caifutong.jpg" /></li>
+                <?php if(is_array($pay) || $pay instanceof \think\Collection || $pay instanceof \think\Paginator): if( count($pay)==0 ) : echo "" ;else: foreach($pay as $key=>$vo): if($vo['type'] == 2): ?>
+                <li><input type="radio" name="pay" value="<?php echo $vo['id']; ?>"/><img src="<?php echo $vo['image']; ?>" /></li>
+                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <div class="clear"></div>
             </ul>
         </div><!--zhzhifufangshii/-->
         <div class="zhifufangshi">
             <ul class="yinhang">
-                <li><input type="radio" /><img src="__STATIC__/home/images/zhifubao.jpg" /></li>
+                <?php if(is_array($pay) || $pay instanceof \think\Collection || $pay instanceof \think\Paginator): if( count($pay)==0 ) : echo "" ;else: foreach($pay as $key=>$vo): if($vo['type'] == 3): ?>
+                <li><input type="radio" name="pay" value="<?php echo $vo['id']; ?>" /><img src="<?php echo $vo['image']; ?>" /></li>
+                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <div class="clear"></div>
             </ul>
         </div><!--zhzhifufangshii/-->
         <table class="zongjia" align="right">
             <tr>
                 <td width="120" align="left">商品总价：</td>
-                <td width="60"><strong class="red">+7.88</strong></td>
+                <td width="60"><strong class="red">￥<?php echo $price['total_price']; ?></strong></td>
             </tr>
-            <tr>
+          <!--  <tr>
                 <td width="120" align="left">运费总额：</td>
                 <td><strong class="red">+121.88</strong></td>
             </tr>
@@ -223,10 +217,10 @@
             <tr>
                 <td width="120" align="left">合计：</td>
                 <td><strong class="red">+2271.88</strong></td>
-            </tr>
+            </tr>-->
             <tr>
                 <td colspan="2" style="height:50px;">
-                    <a href="<?php echo url('proinfo/ordersuccess'); ?>"><img src="__STATIC__/home/images/tijao.png" width="142" height="32" /></a>
+                    <input type="image" src="__STATIC__/home/images/tijao.png" width="142" height="32" id="pay">
                 </td>
             </tr>
         </table><!--zongjia/-->
@@ -279,6 +273,34 @@
 
         },'json')
     })
+
+    $("#pay").click(function () {
+        var address=$("input[name=user]:checked").val();
+        if(!address)
+        {
+            alert("请配送地址");
+            return false;
+        }
+        var pay=$("input[name=pay]:checked").val();
+        if(!pay)
+        {
+            alert("请选择支付方式");
+            return false;
+        }
+        var out_number="<?php echo $out_number; ?>";
+       // alert(out_number);
+        var postdata={
+            'address':address,
+            'pay':pay,
+            'out_number':out_number,
+        };
+        var url="<?php echo url('home/order/ordersubmit'); ?>";
+        $.post(url,postdata,function (result) {
+            location.href=result.url+'?out_number='+result.data;
+        },'json');
+
+    })
+
 </script>
 
 </div>

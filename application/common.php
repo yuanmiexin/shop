@@ -21,6 +21,11 @@ function menu()
                     'insert'=>'article/add',
                     'update'=>'article/upd',
                     'delete'=>'article/del',],
+                [ 'name'=>'支付方式管理',
+                    'url'=>'category/pay',
+                    'insert'=>'article/add',
+                    'update'=>'article/upd',
+                    'delete'=>'article/del',],
             ]
         ],
 

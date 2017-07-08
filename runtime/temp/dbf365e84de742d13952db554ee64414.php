@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"E:\phpStudy\WWW\shop\public/../application/admin\view\index\index.html";i:1498118654;s:63:"E:\phpStudy\WWW\shop\public/../application/admin\view\base.html";i:1499494849;s:72:"E:\phpStudy\WWW\shop\public/../application/admin\view\public\header.html";i:1498894746;s:72:"E:\phpStudy\WWW\shop\public/../application/admin\view\public\footer.html";i:1498894920;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"E:\phpStudy\WWW\shop\public/../application/admin\view\category\index.html";i:1498639046;s:63:"E:\phpStudy\WWW\shop\public/../application/admin\view\base.html";i:1499494849;s:72:"E:\phpStudy\WWW\shop\public/../application/admin\view\public\header.html";i:1498894746;s:72:"E:\phpStudy\WWW\shop\public/../application/admin\view\public\footer.html";i:1498894920;}*/ ?>
 <!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -102,98 +102,56 @@
 
 <section class="Hui-article-box">
    
-<nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="/" class="maincolor">首页</a>
-    <span class="c-999 en">&gt;</span>
-    <span class="c-666">我的桌面</span>
-    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
-<div class="Hui-article">
-    <article class="cl pd-20">
-        <p class="f-20 text-success">欢迎使用H-ui.admin
-            <span class="f-14">v2.3</span>
-            后台模版！</p>
-        <p>登录次数：18 </p>
-        <p>上次登录IP：<?php echo $ip; ?>  上次登录时间：2014-6-14 11:19:55</p>
-        <table class="table table-border table-bordered table-bg">
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 栏目管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="pd-20 text-c">
+    <div class="text-c">
+        <input type="text" name=""  placeholder="栏目名称、id" style="width:250px" class="input-text">
+        <button name="" i class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+        <a class="btn btn-primary radius" onclick="category_add('添加资讯','<?php echo url('add'); ?>','','400')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加栏目</a></span>
+        <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
             <thead>
-            <tr>
-                <th colspan="7" scope="col">信息统计</th>
-            </tr>
             <tr class="text-c">
-                <th>统计</th>
-                <th>资讯库</th>
-                <th>图片库</th>
-                <th>产品库</th>
-                <th>用户</th>
-                <th>管理员</th>
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th>栏目名称</th>
+                <th width="80">排序</th>
+                <th >栏目分类</th>
+                <th>新增时间</th>
+                <th>状态</th>
+                <th width="100">操作</th>
             </tr>
             </thead>
             <tbody>
-            <tr class="text-c">
-                <td>总数</td>
-                <td>92</td>
-                <td>9</td>
-                <td>0</td>
-                <td>8</td>
-                <td>20</td>
+           <?php if(is_array($category) || $category instanceof \think\Collection || $category instanceof \think\Paginator): if( count($category)==0 ) : echo "" ;else: foreach($category as $key=>$vo): ?>
+            <tr class="text-c listorder">
+                <td><input type="checkbox" name="" value=""></td>
+                <td><?php echo $vo['id']; ?></td>
+                <td class="text-l"><?php echo $vo['name']; ?></td>
+                <td><input type="text" value="<?php echo $vo['listorder']; ?>" d-id="<?php echo $vo['id']; ?>" style="width:30px"/></td>
+                <td><?php echo type($vo['type']); ?></td>
+                <td><?php echo date("y-m-d",intval($vo['create_time'])); ?></td>
+                <td ><a href="<?php echo url('category/status',['id'=>$vo['id'],'status'=>$vo['status']==1?0:1]); ?>"><?php echo status($vo['status']); ?></a></td>
+                <td class="f-14">
+                    <a title="编辑" href="javascript:;" onclick="category_edit('栏目编辑','<?php echo url('category/edit',['id'=>$vo['id']]); ?>','1','700','480')" style="text-decoration:none">
+                    <i class="Hui-iconfont">&#xe6df;</i></a>
+                    <a title="删除" href="javascript:;" onclick="category_del('<?php echo url('category/status',['id'=>$vo['id'],'status'=>-1]); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
             </tr>
-            <tr class="text-c">
-                <td>今日</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr class="text-c">
-                <td>昨日</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr class="text-c">
-                <td>本周</td>
-                <td>2</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr class="text-c">
-                <td>本月</td>
-                <td>2</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+              <?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>
-        <table class="table table-border table-bordered table-bg mt-20">
-            <thead>
-            <tr>
-                <th colspan="2" scope="col">服务器信息</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th width="30%">服务器计算机名</th>
-                <td><span id="lbServerName">http://127.0.0.1/</span></td>
-            </tr>
-            <?php if(is_array($info) || $info instanceof \think\Collection || $info instanceof \think\Paginator): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-            <tr>
-                <td><?php echo $key; ?></td>
-                <td><?php echo $vo; ?></td>
-            </tr>
-            <?php endforeach; endif; else: echo "" ;endif; ?>
-            </tbody>
-        </table>
-    </article>
-    <footer class="footer">
-    </footer>
+    </div>
 </div>
+<div class="tp5-o2o pagination"><?php echo $category->render(); ?></div>
+<script type="text/javascript">
+    var SCOPE={
+        'listorder_url':'<?php echo url("category/listorder"); ?>'
+    }
 
+</script>
 
 </section>
 

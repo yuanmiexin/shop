@@ -58,7 +58,7 @@ class Artel extends Controller
         $this->assign([
             'categorys'=>$categorys,
             'category'=>isset($category)?$category:'',
-            'SMS' =>$message,
+            'message' =>$message,
             'information'=>isset($information)?$information:'',
             'data'=>isset($category)?strtolower($category->uname):'',
             'product'=>isset($product)?$product:'',

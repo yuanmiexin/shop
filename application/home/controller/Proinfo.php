@@ -77,6 +77,9 @@ class Proinfo extends Controller
         $address=model('UserInfo')->getAddress(session('user')->id);
         $addresscity=model('City')->getCitys();
         $deals=model('OrderDeal')->getdeals($out_number);
+        $pay=model('Pay')->getpay();
+        $price=model('Order')->get(['out_number'=>$out_number]);
+        //halt($price);
         foreach($addresscity as $adres)
         {
             $adrcity[$adres->id]=$adres->name;
@@ -89,14 +92,30 @@ class Proinfo extends Controller
             'adrcity'=>$adrcity,
             'deals'=>$deals,
             'out_number'=>$out_number,
+            'pay'=>$pay,
+            'price'=>$price,
         ]);
         return $this->fetch();
     }
      //提示成功并跳转支付页
     public function ordersuccess()
     {
+        $out_number=input('get.out_number','');
+        //halt($out_number);
+        if($out_number=='')
+        {
+            return $this->error('还没有提交订单','home/deal/index');
+        }
+        $deal=model('Order')->get(['out_number'=>$out_number]);
+        if(!$deal || $deal->pay_status!=2)
+        {
+            return $this->error('还没有提交订单','home/deal/index');
+        }
+        $pay_in=model('Pay')->get(["id"=>$deal->pay_in]);
+        //halt($pay_in);
         $this->assign([
             'controller'=>'deal',
+            'pay_in'=>$pay_in,
         ]);
         return $this->fetch();
     }

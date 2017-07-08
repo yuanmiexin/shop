@@ -99,12 +99,12 @@ class Order extends Base
         {
            if(!$out_number)
            {
-              return $this->error('订单提交失败');
+              return $this->error('订单生成失败');
            }
              $res = model('Order')->save(['pay_status'=>$status,'total_price'=>$total_price],['out_number'=>$out_number]);
            if($res)
            {
-              return $this->success("订单提交成功",'proinfo/orderlist?out_number='.$out_number);
+              return $this->success("订单生成成功",'proinfo/orderlist?out_number='.$out_number);
            }
         }
 
@@ -122,5 +122,34 @@ class Order extends Base
                    return $this->success('收件地址添加成功','home/proinfo/orderlist?out_number='.$out_number);
                 }
             }
+        }
+
+        public function orderSubmit()
+        {
+            $data=input('post.');
+            if(!$data['out_number'])
+            {
+                return $this->error("订单不存在或生成失败") ;
+            }
+            if(!$data['address'])
+            {
+               return $this->error("地址不正确") ;
+            }
+            if(!$data['pay'])
+            {
+                return $this->error("请选择支付方式") ;
+            }
+            $res=model('Order')->save([
+                'address'=>$data['address'],
+                'pay_in'=>$data['pay'],
+                'pay_status'=>2,
+            ],['out_number'=>$data['out_number']]);
+            if($res)
+            {
+                return $this->success("订单提交成功",'home/proinfo/ordersuccess',$data['out_number']);
+            }else {
+                return $this->error("订单提交失败");
+            }
+
         }
 }

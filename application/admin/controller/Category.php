@@ -87,4 +87,20 @@ class Category extends Common
         }
 
     }
+
+    public function pay()
+    {
+        if(request()->isPost())
+        {
+            $data=input('post.');
+            $res=model('Pay')->add($data);
+            if($res)
+            {
+               return $this->success('添加成功','category/pay') ;
+            }else{
+                return $this->error("添加失败");
+            }
+        }
+        return $this->fetch();
+    }
 }
