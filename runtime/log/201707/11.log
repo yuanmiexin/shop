@@ -1,0 +1,1729 @@
+[ 2017-07-11T18:47:15+08:00 ] 127.0.0.1 127.0.0.1 GET /shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621
+[ log ] 127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621 [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：2,397.84kb] [文件加载：67]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'proinfo',
+    2 => 'ordersuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/orderlist.html?out_number=878121499161621',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Proinfo->ordersuccess[ E:\phpStudy\WWW\shop\application\home\controller\Proinfo.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html [ array (
+  0 => 'controller',
+  1 => 'pay_in',
+  2 => 'out_number',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_pay` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_pay` WHERE  `id` = 43 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:47:17  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:47:18+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：1.429082s][吞吐率：0.70req/s] [内存消耗：2,453.62kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=ULvlmtarxDrSTFhT+SIg+eZPmSj3aF3GRiWJr4hCf/DG0XTFmsVlomEwKZJJ6HFiWdglU0duMAE7INWBHRsgWyoKnjlLWljzazMGGCpBI8dw/rZPQoRhA/iFr3z8andU+EiRKca+Y8if7+hUQx2v9MuZwDTTY8nYBzNfznfdKAw=, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax01491ho4wkoikepf1008a"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1048]
+
+---------------------------------------------------------------
+[ 2017-07-11T18:47:37+08:00 ] 127.0.0.1 127.0.0.1 GET /shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621
+[ log ] 127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621 [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：2,274.03kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'proinfo',
+    2 => 'ordersuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/orderlist.html?out_number=878121499161621',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Proinfo->ordersuccess[ E:\phpStudy\WWW\shop\application\home\controller\Proinfo.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html [ array (
+  0 => 'controller',
+  1 => 'pay_in',
+  2 => 'out_number',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_pay` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_pay` WHERE  `id` = 43 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:47:39  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:47:39+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.538031s][吞吐率：1.86req/s] [内存消耗：2,453.63kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=qZNBKRFg5Omyd5pDNZ6smgs3T5GcMAShFUcNU/90+VdXVwubzsJint3C05yqKPCZGqFrcRchNwCURGOfVJwoLZOMVezSznG7DsvdCoCFHxLfQ1CCj5rYKOGYxCLBHigE40ILjemMpuBFg53sHK6Kml4Hv85ZtS/Uhf+j5SJqvbY=, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax050215sc6yhvdkzpw00a8"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1048]
+
+---------------------------------------------------------------
+[ 2017-07-11T18:48:35+08:00 ] 127.0.0.1 127.0.0.1 GET /shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621
+[ log ] 127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621 [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：2,274.03kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'proinfo',
+    2 => 'ordersuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/orderlist.html?out_number=878121499161621',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Proinfo->ordersuccess[ E:\phpStudy\WWW\shop\application\home\controller\Proinfo.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html [ array (
+  0 => 'controller',
+  1 => 'pay_in',
+  2 => 'out_number',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_pay` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_pay` WHERE  `id` = 43 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:48:37  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:48:37+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：2,379.76kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:49:32  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:49:32+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.070004s][吞吐率：14.28req/s] [内存消耗：2,502.03kb] [文件加载：82]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Class 'LtLogger' not found[E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:257]
+
+---------------------------------------------------------------
+2017-07-11 18:50:02  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:50:03+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.601034s][吞吐率：1.66req/s] [内存消耗：2,505.45kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Class 'LtLogger' not found[E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:257]
+
+---------------------------------------------------------------
+2017-07-11 18:50:11  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:50:12+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.414023s][吞吐率：2.42req/s] [内存消耗：2,505.45kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Class 'LtLogger' not found[E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:257]
+
+---------------------------------------------------------------
+2017-07-11 18:50:42  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:50:43+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.580033s][吞吐率：1.72req/s] [内存消耗：2,502.38kb] [文件加载：82]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [1]Class 'LtLogger' not found[E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:257]
+
+---------------------------------------------------------------
+2017-07-11 18:51:37  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:51:37+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.449026s][吞吐率：2.23req/s] [内存消耗：2,453.66kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=EMQa5fVaqPAVDN9t7PKmnYrqG2A+BDiE6/RLK+2heNPimdwdIgacAOgg2N9yTx55TmLeB7CEcu/5Wgpmiq1tfitK1iR7KaR077zrT0eVHlAN8Ztxlj31rMXX4lVb4U4MIRB+cDcN9n0CffcPb7WQ7nzFGofuc4eP6Gvw7mHxATg=, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax07705wfowx9gbmbvc0030"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1049]
+
+---------------------------------------------------------------
+2017-07-11 18:54:03  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:54:04+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.764043s][吞吐率：1.31req/s] [内存消耗：2,468.05kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:54:30  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:54:31+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.477027s][吞吐率：2.10req/s] [内存消耗：2,468.11kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:55:40  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:55:40+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.835048s][吞吐率：1.20req/s] [内存消耗：2,468.08kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:56:14  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:56:15+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.951055s][吞吐率：1.05req/s] [内存消耗：2,468.06kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:56:47  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:56:47+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.418024s][吞吐率：2.39req/s] [内存消耗：2,468.14kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 18:59:25  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:59:26+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.919052s][吞吐率：1.09req/s] [内存消耗：2,468.20kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-11T18:59:28+08:00 ] 127.0.0.1 127.0.0.1 GET /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,473.23kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ VIEW ] E:\phpStudy\WWW\shop\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+2017-07-11 18:59:46  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T18:59:47+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.435025s][吞吐率：2.30req/s] [内存消耗：2,468.20kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:01:11  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:01:11+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.362020s][吞吐率：2.76req/s] [内存消耗：2,453.67kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=pWlvqP8Ntu2RaFo9vrkth/eUDa+FaWhU5g25YWmhmiZ74au5b876n4S8mn3CoqFjt60Kf1XPhZ+iFqyAtgurJEJqFwsgQV5CARXoy3oEjMUQE6+gHDOAGZlBt7RoW+WvfV78V9KEh56WINW7hyCBPUEKs1DR9BxpaF+JNWJCZBs=, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax05581uif474uputfx0071"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1053]
+
+---------------------------------------------------------------
+2017-07-11 19:01:57  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:01:58+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.475027s][吞吐率：2.11req/s] [内存消耗：2,468.18kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:03:17  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:03:18+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：1.058060s][吞吐率：0.95req/s] [内存消耗：2,468.16kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:03:35  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:03:36+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.657037s][吞吐率：1.52req/s] [内存消耗：2,468.15kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:04:04  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:04:05+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.403023s][吞吐率：2.48req/s] [内存消耗：2,468.17kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:04:30  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:04:31+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.414024s][吞吐率：2.42req/s] [内存消耗：2,468.18kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-11T19:04:35+08:00 ] 127.0.0.1 127.0.0.1 GET /shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621
+[ log ] 127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621 [运行时间：0.063003s][吞吐率：15.87req/s] [内存消耗：2,274.03kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'proinfo',
+    2 => 'ordersuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/orderlist.html?out_number=878121499161621',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Proinfo->ordersuccess[ E:\phpStudy\WWW\shop\application\home\controller\Proinfo.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html [ array (
+  0 => 'controller',
+  1 => 'pay_in',
+  2 => 'out_number',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_pay` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_pay` WHERE  `id` = 43 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:04:37  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:04:37+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.367021s][吞吐率：2.72req/s] [内存消耗：2,468.18kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:05:11  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:05:11+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.360021s][吞吐率：2.78req/s] [内存消耗：2,468.20kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:05:28  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:05:28+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.490028s][吞吐率：2.04req/s] [内存消耗：2,468.18kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:06:17  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:06:18+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.437025s][吞吐率：2.29req/s] [内存消耗：2,453.90kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]check sign Fail! [sign=RtKTqlA7nN1GLDdVbQKPFunB8kTp+Md+TOVKk288BajG8BxuhuGCFAfcapyBxfKYGJiUGt/0UbW0dQsK3XV5RKUtzuwLwbOHxRE/U+CJ/iVbsrBwSZZzv/zqdMIMVtRRdK948G8b9cKMwJ83GHV1BO1m0uTvZMGuIYvrXgMnmopLRCzI1kDbttPJDwVKNPmhGyd+BsYIYSirdC2/31XoOAx06zD3aAYD+Eguq7P/eEhAsSGIasn970Z0GMQekMx79PLZC8b+DrCTl3VJUHzdSOmeI/Q1VVIPhuQnWg3hVq0pPfNA5Trv1DhzTM76DeFOKXjQT561mlBPgfYXuceGsQ==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax03073luheszjratoo00cb"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1054]
+
+---------------------------------------------------------------
+2017-07-11 19:07:23  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:07:24+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：1.039059s][吞吐率：0.96req/s] [内存消耗：2,468.19kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:07:44  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:07:44+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.374022s][吞吐率：2.67req/s] [内存消耗：2,468.19kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:08:06  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:08:07+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.402023s][吞吐率：2.49req/s] [内存消耗：2,468.14kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:08:53  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:08:53+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.436025s][吞吐率：2.29req/s] [内存消耗：2,383.51kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:09:12  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:09:12+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.341019s][吞吐率：2.93req/s] [内存消耗：2,453.88kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=WxuahDDNWc6Fbgb9tK+Qj9aypiiPBs5bBcOxEFVl2d1/unmVG8r00gXYX7kaxIkWRLtAY/R3k6eVltkrhg6WmUcwTK3TQKv4mg/URbILxrgWUTU3AKlDD4kTzTSOTobEzSVfLL7or9VSvCcclNK1Jt4IlswwDfvRvxAXAG2CE8su3UEspuG8GMdLa8R6IimlOsp8asI0ACDvraVl+x3kESIKyqNhtO4tbNHE4IMzdP9xTLrUqW/3cuaBG1DnQjpMvTxqLw/zCjmenCHSoBo1koWGOlLw9NxT2nXqxZ5U6TZdPU1n/YXJyKrM5qFjUuLdA8JRX63lxHzNQwYWZGKj9w==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax09647gz2vvou6pnvm00fa"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1057]
+
+---------------------------------------------------------------
+2017-07-11 19:10:41  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:10:42+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.846048s][吞吐率：1.18req/s] [内存消耗：2,453.88kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=GNUCOVYZAVKMTkM+KPzJmKuCYSFxDn1fPBTpoH4zluZcIrnFVbU9aCVUFu8q8H7wgOB+JF8ucOG/Hy8AS4uy9s8fVEpoaHAh8jM5AbBKJn89kSwnYG6kswXKL4XzLtkJWy/HBgRNzKwmdNhSWUz/K2/AuQ5dCeUFj8SfeHjNc0Fr/UU6YIGByQ07sfv6tazra4cDP8pkOxP562foJFmIl2rlnlMzr53nzUNDMC7mOkdGCxv/Yyz2yJKlNqXt1V3q2GyZE/uYDz4JHYNKUeKLB2hjEGWpd00awPLTe6dBlgTWBvfKGQsiz3vGTo2S57cEK+ARSgLHFzJfdZfltFQaYQ==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax05255cz36yomkata3008e"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1058]
+
+---------------------------------------------------------------
+2017-07-11 19:10:54  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:10:54+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.424024s][吞吐率：2.36req/s] [内存消耗：2,453.88kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=GxrnDWdICxypU+4XrFWi+YgOdOSqfsKjfhUNPa2+cfrj/67Zeaul9+hTV/Qtu7txcRevE9iwHWDSRU4o93UAL4dKvbiLpmSVHnsPnA2y5CE8Y41ZQ4lB0Dd+DjIK+cVp0DAV7Oo5GqBB2F9pTRI57MBFG0WjdrahuIw3slp2K1kN/rz/Hxu1LxIK3xPsVWh8UP+UnEkhVHDWwChdk/QMZ1zfV4q3ohFTEhjioe2YGbbrY1ySggIQ+GxHx+wAIsW3dcY1phfE3SIEC26mLyrNEs8g8yIhwhmFIzzzPb2fiZ7E70+B+fVBAE8B3ICsTeBkeD+dn9y/FGkm6uyxzut3fQ==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax01644cm4bwbprcfw00086"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1059]
+
+---------------------------------------------------------------
+2017-07-11 19:12:27  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:12:28+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.962055s][吞吐率：1.04req/s] [内存消耗：2,453.89kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=hcq8zYCqSJRtlUPY+1nP/uz5veLJfC6p/PMaBEUg1usuUqWfg6+3vKGnSPQ9dO7IImzupNbKW/SDb1esqaf/aDfXHpkOl6ubxZ3igxhU8tve1jgj79Xr/j8D1hiT1eMAaloyMyDG7H5UAQ9bK5nWv15UXMuP02qXRd/yWdHfSzwuVFz2qEaiL31P4WvfNxk+JBdiBId/4Fm6M2AITAu4Nqgh7ry1r993UFIPpCwWDRUSeAhAK1jGX8v0KPVqXci+4pEKEhJX7abPCdO5cHsQ9tVpltqB7sFVZtLxM7XIljJjHwjhxnMERtpXS9BwPw3b0SzvwJbA5NEgqo+nYoR5Og==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax03907tolvwzojzecy00c7"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1060]
+
+---------------------------------------------------------------
+2017-07-11 19:13:05  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:13:05+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.753043s][吞吐率：1.33req/s] [内存消耗：2,453.89kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]check sign Fail! [sign=R6da43xUJuajiYI4irUfMBba3cLzfTcNV3VTVxedO2w46l9yZLBQPi/UZrdycasGXwQiTSfPzl82K6lxKqt9Irf2Q3S+qKf7ZY+GlPN6Eval1KtRqpFtY4pNOAeh60ikDjCaCHQtYMXNHQugnf41dhHBZMjm3xkbb/8kVlctxUWJLDXVNo9ZzQvcOD8iDQ1suT9McDhD5VmJKDQ0mzYhkNVfIP7obM2T4Yi1fgi1qLYlnuglF9KTjvYe5TObTC28Ryn7uAz9ugMe5fJEseeRiZj/w4zhp/8EugUJkmRpcGSy+UXlokU0y6HRJctxavJph4ohA4ubwjf+py+m7/Ou6w==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax00439r8123zp1bfbo0028"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1062]
+
+---------------------------------------------------------------
+2017-07-11 19:13:47  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:13:48+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.676039s][吞吐率：1.48req/s] [内存消耗：2,453.90kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]check sign Fail! [sign=J4qKaw41OsX27OexanTjIG7NlVF+DyUY/qJ0MqWZB0svHFmSXt23dihvUez0wCdyZXfGIjoKotX556TRYjonnRbNsVGQ3t5EMkRxjmiB26VXor8nmHpVdHloVxtnLMFu2X4AISJMR9O8/FV/q+5T8mAm8xjJyoQEkftKlX9fXcFWPdL1kihdB85q2bzUasuJRBvGOmzsbvjqQWlY0vQ1rIRNDJE5bSC7qIfYJHUr95924Y8ZhxNNsznreA86pe8xDtWMHJM4QW931FAakIfu7dkwrxgPiv6lgKERyylAZFKe4Dc8dT6P9HsWNzs2ZFOpAXpBGVh7/Oo3Das4hDY4mQ==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax021690ac5mohssipv00e2"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1061]
+
+---------------------------------------------------------------
+2017-07-11 19:14:11  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:14:11+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.356021s][吞吐率：2.81req/s] [内存消耗：2,453.92kb] [文件加载：79]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]check sign Fail! [sign=L0Mjwp6vMteeNr8phx2wy/9nAxZ916wjCxcVtMQPtnD9IbiR8dXXcSjpQhEcHiwfMHfzx7dQTDMr4TCI3CL99BsR2C/gzKfWTrTuVqy+XVl3R8h3a4d4/0c80d/crBv5bIGFa9rRfGK2D5lbYTAEfpbqQM4HvenFiCqg58rLYSE+15cAI5FMhdb/ma+yrYGwx5jA6rgASo43cdOIee8VJirRXpqzKwDWJxgLueW+utcNHA1ZgUxdZHCf3rTv83AOHKJAYYtx+EGLobNm9AcCBOIx3mRpYrSYH4WYrl2rC6GBAgce/1mMMNjQ5y6fq9V3yuO9ns+dUjffekcHCr1LyQ==, signSourceData={"code":"10000","msg":"Success","out_trade_no":"878121499161621","qr_code":"https://qr.alipay.com/bax05140qkhrs5zxrsjs003d"}][E:\phpStudy\WWW\shop\extend\alipay\aop\AopClient.php:1062]
+
+---------------------------------------------------------------
+2017-07-11 19:14:27  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:14:27+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.363021s][吞吐率：2.75req/s] [内存消耗：2,382.91kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:15:04  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:15:04+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：0.393022s][吞吐率：2.54req/s] [内存消耗：2,468.09kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+2017-07-11 19:21:10  {"out_trade_no":"878121499161621","total_amount":"273594.00","timeout_express":"5m","subject":"爱站SEO ","body":"3"}
+[ 2017-07-11T19:21:11+08:00 ] 127.0.0.1 127.0.0.1 POST /shop/public/index.php/home/pay/alipay.html
+[ log ] 127.0.0.1/shop/public/index.php/home/pay/alipay.html [运行时间：1.358078s][吞吐率：0.74req/s] [内存消耗：2,468.17kb] [文件加载：80]
+[ info ] [ LANG ] E:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'pay',
+    2 => 'alipay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=kis7rplr26qv0dh5ab2bfs0gg2',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://127.0.0.1/shop/public/index.php/home/proinfo/ordersuccess.html?out_number=878121499161621',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'out_number' => '878121499161621',
+)
+[ info ] [ RUN ] app\home\controller\Pay->alipay[ E:\phpStudy\WWW\shop\application\home\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=mytc;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mytc_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `mytc_order` WHERE  `out_number` = '878121499161621' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

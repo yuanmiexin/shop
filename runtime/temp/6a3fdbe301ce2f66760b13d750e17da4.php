@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html";i:1499505228;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html";i:1499758903;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,12 +74,29 @@
             <h3>下单成功</h3>
             <div class="zhifu">
                 您选择的支付方式是 <strong class="red"><?php echo $pay_in['name']; ?></strong><br />
-                <a href="https://www.alipay.com/" target="_blank"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
+                <a href="javascript:void(0) " target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
             </div><!--zhifu/-->
         </div><!--chenggong/-->
     </div><!--cont/-->
 </div>
 </div>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/home/js/common.js"></script>
+<script type="text/javascript">
+    $("#payin").click(function () {
+
+        var out_number="<?php echo $out_number; ?>";
+       //alert(out_number);
+        var url="<?php echo url('home/pay/alipay'); ?>";
+        var postdata={
+            'out_number':out_number,
+        };
+        $.post(url,postdata,function(result){
+            console.log(result);
+        },'json');
+    });
+</script>
 
 </div>
 </div>

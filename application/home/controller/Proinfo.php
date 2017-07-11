@@ -116,6 +116,7 @@ class Proinfo extends Controller
         $this->assign([
             'controller'=>'deal',
             'pay_in'=>$pay_in,
+            'out_number'=>$out_number,
         ]);
         return $this->fetch();
     }
