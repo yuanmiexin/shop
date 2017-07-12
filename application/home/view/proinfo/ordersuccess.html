@@ -19,7 +19,7 @@
             <h3>下单成功</h3>
             <div class="zhifu">
                 您选择的支付方式是 <strong class="red">{$pay_in.name}</strong><br />
-                <a href="javascript:void(0) " target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
+                <a href="{:url('home/pay/index')}" -target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
             </div><!--zhifu/-->
         </div><!--chenggong/-->
     </div><!--cont/-->
@@ -29,17 +29,6 @@
 <script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/home/js/common.js"></script>
 <script type="text/javascript">
-    $("#payin").click(function () {
 
-        var out_number="{$out_number}";
-       //alert(out_number);
-        var url="{:url('home/pay/alipay')}";
-        var postdata={
-            'out_number':out_number,
-        };
-        $.post(url,postdata,function(result){
-            console.log(result);
-        },'json');
-    });
 </script>
 {/block}

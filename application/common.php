@@ -287,3 +287,28 @@ function doCurl($url, $type=0, $data=[]) {
     return $output;
 
 }
+
+
+
+/***************************************************************************************/
+//获得账户
+function get_user($ch,$apikey){
+    curl_setopt ($ch, CURLOPT_URL, 'https://sms.yunpian.com/v2/user/get.json');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('apikey' => $apikey)));
+    return curl_exec($ch);
+}
+function send($ch,$data){
+    curl_setopt ($ch, CURLOPT_URL, 'https://sms.yunpian.com/v2/sms/single_send.json');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    return curl_exec($ch);
+}
+function tpl_send($ch,$data){
+    curl_setopt ($ch, CURLOPT_URL, 'https://sms.yunpian.com/v2/sms/tpl_single_send.json');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    return curl_exec($ch);
+}
+function voice_send($ch,$data){
+    curl_setopt ($ch, CURLOPT_URL, 'http://voice.yunpian.com/v2/voice/send.json');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    return curl_exec($ch);
+}

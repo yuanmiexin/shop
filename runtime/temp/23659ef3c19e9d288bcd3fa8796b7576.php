@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html";i:1499861024;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"E:\phpStudy\WWW\shop\public/../application/home\view\deal\index.html";i:1499043391;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,37 +55,73 @@
   <div class="neiye clearfix">
 
   
-    <div class="neiyeL">
-        <div class="banL noel">
-            <div class="yuyue">
-                <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
-                    中江瓜蒌</a></p>
-                <p><a href="#" class="yuyue_a"></a></p>
-            </div>
+<div class="neiyeL">
+    <div class="banL noel">
+        <div class="yuyue">
+            <p><a href="#"><img src="__STATIC__/home/text/1.gif" width="232" height="213" alt="" />
+                中江瓜蒌</a></p>
+            <p><a href="#" class="yuyue_a"></a></p>
         </div>
-
     </div>
+
+    <div class="banL noel">
+        <div class="hezuo_top" style="padding:0px 75px;background: #FBAE2F;border-radius: 3px"><h3 style="line-height:2;color:whitesmoke;"><a href="<?php echo url('home/infor/inquiry'); ?>"> 我要求购</a></h3></div>
+    </div>
+
+    <div class="hezuo">
+        <div class="hezuo_top">推荐合作单位</div>
+        <div class="hezuo_text">
+            <ul>
+                <li><a href="#"><img src="__STATIC__/home/text/9.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/10.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/11.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/12.gif" width="206" height="60" alt="" /></a></li>
+                <li><a href="#"><img src="__STATIC__/home/text/13.gif" width="206" height="60" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 
 <div class="neiyeR">
-    <div class="cont">
-        <div class="carImg"><img src="__STATIC__/home/images/car3.jpg" width="715" height="27" /></div>
-        <div class="chenggong">
-            <h3>下单成功</h3>
-            <div class="zhifu">
-                您选择的支付方式是 <strong class="red"><?php echo $pay_in['name']; ?></strong><br />
-                <a href="<?php echo url('home/pay/index'); ?>" -target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
-            </div><!--zhifu/-->
-        </div><!--chenggong/-->
-    </div><!--cont/-->
+    <div class="neiBT">
+        <span class="mianT_span">行业信息 | INFORMATION </span>
+    </div>
+    <div class="neiText">
+        <div class="neiIfino">
+            <ul>
+                <li class="neiNt l">全部分类</li>
+               <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): if( count($categorys)==0 ) : echo "" ;else: foreach($categorys as $key=>$vo): ?>
+                <li class="r"><a href="<?php echo url('deal/index',['id'=>$vo['id']]); ?>" class="<?php if($category['id'] == $vo['id']): ?>xuanz<?php endif; ?>"><?php echo $vo['name']; ?></a>|</li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+        </div>
+        <div class="tuwenli clearfix">
+            <ul>
+               <?php if(is_array($deal) || $deal instanceof \think\Collection || $deal instanceof \think\Paginator): if( count($deal)==0 ) : echo "" ;else: foreach($deal as $key=>$vo): ?>
+                <li>
+                    <p><a href="<?php echo url('proinfo/index',['id'=>$vo['id']]); ?>"><img src="<?php echo $vo['image']; ?>" width="208" height="177" alt="" /> <?php echo $vo['name']; ?></a></p>
+                    <p><a href="<?php echo url('proinfo/index',['id'=>$vo['id']]); ?>" class="yuyue_a"></a></p>
+                </li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+        </div>
+        <div class="feiye">
+            <ul>
+                <li><input type="submit" value="确定" class="feiye_ban" />
+                <li>到第<input name="" type="text" class="feiye_ingp" />页</li>
+                <li><a href="#">下一页</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#" class="xuanz">1</a></li>
+                <li><a href="#" class="feiye_hs">上一页</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
-</div>
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__STATIC__/admin/hui/lib/layer/2.1/layer.js"></script>
-<script type="text/javascript" src="__STATIC__/home/js/common.js"></script>
-<script type="text/javascript">
-
-</script>
 
 </div>
 </div>
