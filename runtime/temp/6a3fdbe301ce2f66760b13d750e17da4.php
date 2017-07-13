@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html";i:1499861024;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"E:\phpStudy\WWW\shop\public/../application/home\view\proinfo\ordersuccess.html";i:1499908303;s:62:"E:\phpStudy\WWW\shop\public/../application/home\view\base.html";i:1498204250;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\header.html";i:1499312616;s:71:"E:\phpStudy\WWW\shop\public/../application/home\view\public\footer.html";i:1499068012;}*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,7 +74,7 @@
             <h3>下单成功</h3>
             <div class="zhifu">
                 您选择的支付方式是 <strong class="red"><?php echo $pay_in['name']; ?></strong><br />
-                <a href="<?php echo url('home/pay/index'); ?>" -target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
+                <a href="<?php echo url('home/payw/weixin',['out_number'=>$out_number]); ?>" -target="_blank" id="payin"><img src="__STATIC__/home/images/zhifu.png" width="133" height="41" /></a>
             </div><!--zhifu/-->
         </div><!--chenggong/-->
     </div><!--cont/-->
