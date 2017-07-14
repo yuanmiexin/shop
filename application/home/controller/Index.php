@@ -13,7 +13,8 @@ class Index extends Controller
        $newso=model('News')->getNews(9);
        $deals=model('Deal')->getdeals();
        $hotdeal=model('Deal')->gethotdeals();
-       //halt($hotdeal);
+
+//halt($hotdeal);
        $this->assign([
            'news'=>$news,
            'newsn'=>$newsn,
